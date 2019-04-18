@@ -234,7 +234,7 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
 
 /* MAIN SECTION */
 #wrapper #mainSection {
-  height: 100vh;
+  height: 100%;
 }
 #mainSection #introduction {
 
@@ -254,14 +254,14 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
 #mlSection {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 100%;
   background-color: black;
   outline: 1px solid black;
   outline-offset: 5px;
 }
 #mlSection #bckgrImg {
   width: 100%;
-  height: 100%;
+  height: 500px;
   background-image: url("../images/circle.png");
   background-position: center center;
   background-size: 300px auto;
@@ -296,6 +296,11 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
 }
 #mlSection:hover #mlMessage {
   height: 50%;
+}
+#mainSection #mlAside {
+  display: block;
+  width: 100%;
+  height: 400px;
 }
 
 
