@@ -186,6 +186,8 @@ a {
   font-size: 12px;
   margin-top: 5px;
   text-transform: uppercase;
+  mix-blend-mode: exclusion;
+  z-index: 10;
 }
 #lightLabel:hover {
   cursor: pointer;
@@ -203,15 +205,14 @@ a {
   bottom: -5px;
   left: 15px;
   transition: all .3s ease-in-out;
+  mix-blend-mode: exclusion;
 }
 #lightLabel:hover span::after {
   left: 0px;
 }
 input#lightInput:checked + #lightLabel {
-  color: black;
 }
 input#lightInput:checked + #lightLabel span::after {
-  background: black;
   left: 40px;
 }
 input#lightInput:checked + #lightLabel:hover span::after {
@@ -234,7 +235,6 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
 
 /* MAIN SECTION */
 #wrapper #mainSection {
-  height: 100%;
 }
 #mainSection #introduction {
 
@@ -282,7 +282,7 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
   cursor: pointer;
   outline: 1px solid black;
   outline-offset: -5px;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 18px;
   margin: 0 auto;
   transition: margin 0.3s ease-in-out;
@@ -300,10 +300,47 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
 #mainSection #mlAside {
   display: block;
   width: 100%;
-  height: 400px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem 1.4rem;
+  font-size: 1.2rem;
 }
-
-
+#mlAside blockquote {
+  background-color: rgba(0, 0, 0, .1);
+  padding: 2.2rem 1.4rem;
+  font-size: 1.4rem;
+  outline: 1px solid black;
+  outline-offset: 5px;
+}
+#mlAside blockquote:hover {
+  text-decoration: underline;
+}
+#mlAside blockquote span {
+  font-size: 2.4rem;
+  color: rgb(221, 182, 78);
+  padding: 0 .4rem;
+}
+#mlAside #mlIcons {
+  outline: 1px solid black;
+  outline-offset: 5px;
+}
+#mlAside #mlIcons #mlIconsBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+#mlIconsBox li {
+  min-width: 80px;
+}
+#mlIconsBox li img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgb(221, 182, 78);
+}
 
 
 /* FOOTER SECTION */
