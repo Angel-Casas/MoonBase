@@ -42,22 +42,26 @@ a {
   max-width: 800px;
   margin: 0 auto;
 }
-#mainNav #circleIcon {
+#mainNav > a {
+  display: inline-block;
+}
+.circleIcon {
   width: 50px;
   height: 50px;
   display: inline-block;
-  margin: 5px 0;
+  margin: 3px 0;
 }
-#circleIcon .circleBox {
+.circleIcon .circleBox {
   width: 100%;
   height: 100%;
 }
-#circleIconBox {
+.circleIconBox {
   position: relative;
   width: 100%;
   height: 100%;
+  float: left;
 }
-#circleIconBox .circle {
+.circleIconBox .circle {
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
@@ -68,18 +72,18 @@ a {
   transition: all 2s ease-in-out;
   margin: auto;
 }
-#circleIconBox .big {
+.circleIconBox .big {
   width: 50px;
   height: 50px;
 }
-#circleIconBox .medium {
+.circleIconBox .medium {
   width: 25px;
   height: 25px;
   right: 25px;
   transform-origin: right;
   animation: clockwiserotation 4s ease-in-out infinite;
 }
-#circleIconBox .small {
+.circleIconBox .small {
   width: 15px;
   height: 15px;
   right: 35px;
@@ -87,7 +91,7 @@ a {
   animation: clockwiserotation 4s ease-out infinite;
 
 }
-#circleIconBox .tiny {
+.circleIconBox .tiny {
   width: 5px;
   height: 5px;
   left: 45px;
@@ -103,8 +107,9 @@ a {
 #mainNav .navBtn {
   display: none;
   width: 30px;
+  height: 50px;
+  margin: 10px 15px 0;
   float: right;
-  margin: 10px 15px 0 0;
 }
 
 #mainNav .navBtn:after,
@@ -228,7 +233,7 @@ input#lightInput:checked ~ #wrapper #mainNav .navBtn div {
   background-color: black;
 }
 
-input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
+input#lightInput:checked ~ #wrapper .circleIcon .circle {
   border: 2px solid black;
 }
 
@@ -251,6 +256,9 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
   display: block;
   font-size: 2.6rem;
 }
+
+/* ML SECTION */
+
 #mlSection {
   position: relative;
   width: 100vw;
@@ -259,7 +267,7 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
   outline: 1px solid black;
   outline-offset: 5px;
 }
-#mlSection #bckgrImg {
+#mlSection #mlImg {
   width: 100%;
   height: 500px;
   background-image: url("../images/circle.png");
@@ -342,57 +350,21 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
   border: 1px solid rgb(221, 182, 78);
 }
 
+/* BITCOIN SECTION */
+#wrapper #bitcoinSection {
+  display: none;
+}
+#wrapper #bitcoinAside {
+  display: none;
+}
+
 
 /* FOOTER SECTION */
 
 
 #wrapper #mainFooter {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .3);
-}
-#mainFooter #footerNav {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  list-style-type: none;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0;
-}
-#footerNav .footerNavElem {
-  position: relative;
-  width: 100%;
-  padding: .8rem 0;
-  cursor: pointer;
-}
-#footerNav .footerNavElem::after {
-  content: "";
-  height: 3px;
-  width: 10%;
-  position: absolute;
-  bottom: 5px;
-  left: 2px;
-}
-#footerNav .footerNavElem:nth-child(1)::after {
-  background-image: linear-gradient(to right, rgb(174, 246, 81) , rgb(71, 208, 150));
-}
-#footerNav .footerNavElem:nth-child(2)::after {
-  background-image: linear-gradient(to right, rgb(71, 208, 150) , rgb(77, 150, 236));
-}
-#footerNav .footerNavElem:nth-child(3)::after {
-  background-image: linear-gradient(to right, rgb(77, 150, 236) , rgb(148, 83, 255));
-}
-#footerNav .footerNavElem:nth-child(4)::after {
-  background-image: linear-gradient(to right, rgb(148, 83, 255) , rgb(255, 126, 62));
-}
-#footerNav .footerNavElem:nth-child(5)::after {
-  background-image: linear-gradient(to right, rgb(255, 126, 62) , rgb(255, 216, 48));
-}
-#footerNav .footerNavElem:hover::after {
-  width: 90%;
-  transition: width ease-out .2s;
+  background-color: rgba(0, 0, 0, .1);
 }
 #mainFooter #personalQuote p {
   font-size: 1rem;
@@ -430,7 +402,7 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
 
 @media (max-width: 600px) {
   #mainNav {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .2);
   }
   #mainNav > h2 {
     display: inline-block;
@@ -441,8 +413,7 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
   }
   #mainNav .navBtn {
     position: relative;
-    display: block;
-    float: right;
+    display: inline-block;
   }
   #mainNav .navBtn > label {
     position: absolute;
@@ -455,11 +426,10 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
   }
   #mainNav #mainNavUl {
     position: relative;
+    width: calc(100% - 60px);
     height: 0;
     overflow-y: hidden;
-    width: calc(100% - 45px);
     display: flex;
-    opacity: 0;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-self: center;
@@ -469,7 +439,6 @@ input#lightInput:checked ~ #wrapper #mainNav #circleIcon .circle {
   }
   #mainNav #navCheck:checked ~ #mainNavUl {
     height: 200px;
-    opacity: 1;
   }
   #mainNav #navCheck:checked ~ .navBtn:before {
     transform: translateY(9px) rotate(135deg);
