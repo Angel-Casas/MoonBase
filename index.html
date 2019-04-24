@@ -35,23 +35,26 @@
             </div>
           </div>
         </a>
-        <input type="checkbox" id="navCheck">
-        <div class="navBtn">
-          <label for="navCheck"></label>
-          <div></div>
-        </div>
-        <ul id="mainNavUl">
-          <li class="mainNavElem current"><a href="">Machine Learning</a></li>
-          <li class="mainNavElem"><a href="">Bitcoin</a></li>
-          <li class="mainNavElem"><a href="">Apps</a></li>
-          <li class="mainNavElem"><a href="">Blog</a></li>
-          <li class="mainNavElem"><a href="">About</a></li>
-        </ul>
       </nav>
       <!--End of #mainNav-->
     </header>
     <!-- End of #mainHeader -->
     <section id="mainSection">
+      <input type="checkbox" id="navCheck">
+      <div class="navBtn">
+        <label for="navCheck"></label>
+        <div></div>
+      </div>
+      <input type="radio" id="mlTab" name="navRadio" checked="checked">
+      <label for="mlTab" class="mainNavElem">Machine Learning</label>
+      <input type="radio" id="bitcoinTab" name="navRadio">
+      <label for="bitcoinTab" class="mainNavElem">Bitcoin</label>
+      <input type="radio" id="appsTab" name="navRadio">
+      <label for="appsTab" class="mainNavElem">Apps</label>
+      <input type="radio" id="blogTab" name="navRadio">
+      <label for="blogTab" class="mainNavElem">Blog</label>
+      <input type="radio" id="aboutTab" name="navRadio">
+      <label for="aboutTab" class="mainNavElem">About</label>
       <div id="introduction">
         <div id="introMessage">
           <h2>Through Another Lens</h2>
@@ -79,8 +82,8 @@
           </blockquote>
           <p>It is in the same spirit as that of Alan Turing that I want to share my efforts to unravel this science for
           any kind of audience.</p>
-          <div id="mlIcons">
-            <ul id="mlIconsBox">
+          <div class="iconsBox">
+            <ul class="iconsUl">
               <li><img src="" alt=""><br>Find</li>
               <li><img src="" alt=""><br>Try</li>
               <li><img src="" alt=""><br>Understand</li>
@@ -101,27 +104,47 @@
         </div>
         <!-- End of #bitcoinSection -->
         <aside id="bitcoinAside">
-          <p>Computer Science has always been seeking to unravel the intricacies of defining
-          a well formed problem in computer language in order to reach a successful completion
-          of such a problem.</p>
-          <blockquote cite="https://www.azquotes.com/quote/847377">
-            <a href="https://www.azquotes.com/quote/847377"><span>“</span>Programming is a skill best acquired by practice and example rather than from books <span>”</span><br>
-            - Alan Turing -</a>
+          <p>Bitcoin is a new digital tool to transfer value between two or more individuals without an intermediary. Being a digital form of money it is proving to be a revolution worth checking out!</p>
+          <blockquote cite="">
+            <a href=""><span>“</span>Bitcoin Quote <span>”</span><br>
+            - Author -</a>
           </blockquote>
-          <p>It is in the same spirit as that of Alan Turing that I want to share my efforts to unravel this science for
-          any kind of audience.</p>
-          <div id="bitcoinIcons">
-            <ul id="bitcoinIconsBox">
-              <li><img src="" alt=""><br>Find</li>
-              <li><img src="" alt=""><br>Try</li>
-              <li><img src="" alt=""><br>Understand</li>
-              <li><img src="" alt=""><br>Repeat</li>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi expedita deleniti explicabo eos. Obcaecati rem, sit, odio explicabo sapiente facere nostrum ipsa doloremque numquam quis assumenda perferendis blanditiis mollitia minima!.</p>
+          <div class="iconsBox">
+            <ul class="iconsUl">
+              <li><img src="" alt=""><br>Earn</li>
+              <li><img src="" alt=""><br>Transact</li>
+              <li><img src="" alt=""><br>Hodl</li>
+              <li><img src="" alt=""><br>Spend</li>
             </ul>
           </div>
         </aside>
         <div id="appsSection" class="clearSections">
-
+          <div id="appsImg"></div>
+          <a href="">
+            <div class="upArrow"></div>
+            <div id="appsMessage">
+              <h2>Visit</h2>
+              <p>Learning about Bitcoin takes time and patience, if you want to get started with a comprehensive introduction please check this out!</p>
+            </div>
+          </a>
         </div>
+        <aside id="appsAside">
+          <p>Bitcoin is a new digital tool to transfer value between two or more individuals without an intermediary. Being a digital form of money it is proving to be a revolution worth checking out!</p>
+          <blockquote cite="">
+            <a href=""><span>“</span>Bitcoin Quote <span>”</span><br>
+            - Author -</a>
+          </blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi expedita deleniti explicabo eos. Obcaecati rem, sit, odio explicabo sapiente facere nostrum ipsa doloremque numquam quis assumenda perferendis blanditiis mollitia minima!.</p>
+          <div class="iconsBox">
+            <ul class="iconsUl">
+              <li><img src="" alt=""><br>Earn</li>
+              <li><img src="" alt=""><br>Transact</li>
+              <li><img src="" alt=""><br>Hodl</li>
+              <li><img src="" alt=""><br>Spend</li>
+            </ul>
+          </div>
+        </aside>
         <!-- End of #appsSection -->
         <div id="blogSection" class="clearSections">
 

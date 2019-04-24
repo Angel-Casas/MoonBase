@@ -31,7 +31,7 @@ a {
 
 #wrapper #mainHeader {
   width: 100%;
-  margin: 2em 0;
+  margin: 2em 0 0;
 }
 #mainHeader h1 {
   display: none;
@@ -101,10 +101,10 @@ a {
 @keyframes clockwiserotation {
   to {transform: rotate(360deg);}
 }
-#mainNav #navCheck {
+#navCheck {
   display: none;
 }
-#mainNav .navBtn {
+.navBtn {
   display: none;
   width: 30px;
   height: 50px;
@@ -112,9 +112,9 @@ a {
   float: right;
 }
 
-#mainNav .navBtn:after,
-#mainNav .navBtn:before,
-#mainNav .navBtn div {
+.navBtn:after,
+.navBtn:before,
+.navBtn div {
   background-color: white;
   content: '';
   display: block;
@@ -122,25 +122,33 @@ a {
   margin: 7px 0;
   transition: all .2s ease-in-out;
 }
-
-#mainNav #mainNavUl {
-  height: 100%;
-  width: 100%;
+#mainNavTabs {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-self: center;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
-#mainNavUl .mainNavElem {
+#mainSection > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+#mainSection > label {
   position: relative;
-  width: 100%;
-  cursor: pointer;
+  top: 0;
+  display: inline-block;
+  width: auto;
+  min-width: 100px;
   height: 50px;
   text-transform: uppercase;
+  cursor: pointer;
 }
-#mainNavUl .mainNavElem::after {
+#mainSection > label::after {
   content: "";
   height: 3px;
   width: 10%;
@@ -149,30 +157,59 @@ a {
   left: 2px;
   transition: width ease-out .2s;
 }
-#mainNavUl .mainNavElem:nth-child(1)::after {
+#mainSection > .mainNavElem:nth-child(4)::after {
   background-image: linear-gradient(to right, rgb(174, 246, 81) , rgb(71, 208, 150));
 }
-#mainNavUl .mainNavElem:nth-child(2)::after {
+#mainSection > .mainNavElem:nth-child(6)::after {
   background-image: linear-gradient(to right, rgb(71, 208, 150) , rgb(77, 150, 236));
 }
-#mainNavUl .mainNavElem:nth-child(3)::after {
+#mainSection > .mainNavElem:nth-child(8)::after {
   background-image: linear-gradient(to right, rgb(77, 150, 236) , rgb(148, 83, 255));
 }
-#mainNavUl .mainNavElem:nth-child(4)::after {
+#mainSection > .mainNavElem:nth-child(10)::after {
   background-image: linear-gradient(to right, rgb(148, 83, 255) , rgb(255, 126, 62));
 }
-#mainNavUl .mainNavElem:nth-child(5)::after {
+#mainSection > .mainNavElem:nth-child(12)::after {
   background-image: linear-gradient(to right, rgb(255, 126, 62) , rgb(255, 216, 48));
 }
-#mainNavUl .mainNavElem:hover::after {
+#mainSection .mainNavElem:hover::after {
   width: 90%;
 }
-#mainNavUl .mainNavElem.current {
+#mainSection input:checked + .mainNavElem {
   font-weight: 600;
 }
-#mainNavUl .mainNavElem.current::after {
+#mainSection input:checked + .mainNavElem::after {
   width: 90%;
 }
+#mainSection #mlTab:checked ~ #introduction h2::before {
+  content: "Machine Learning";
+}
+#mainSection #mlTab:checked ~ #mainSectionBox #mlSection,
+#mainSection #mlTab:checked ~ #mainSectionBox #mlAside {
+  display: block;
+}
+#mainSection #bitcoinTab:checked ~ #introduction h2::before {
+  content: "Bitcoin";
+}
+#mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinSection,
+#mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinAside {
+  display: block;
+}
+#mainSection #appsTab:checked ~ #introduction h2::before {
+  content: "Apps";
+}
+#mainSection #appsTab:checked ~ #mainSectionBox #appsSection,
+#mainSection #appsTab:checked ~ #mainSectionBox #appsAside {
+  display: block;
+}
+#mainSection #blogTab:checked ~ #introduction h2::before {
+  content: "Blog";
+}
+#mainSection #blogTab:checked ~ #mainSectionBox #blogSection,
+#mainSection #blogTab:checked ~ #mainSectionBox #blogAside {
+  display: block;
+}
+
 #lightInput {
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
@@ -227,9 +264,9 @@ input#lightInput:checked ~ #wrapper {
   background: white;
   color: black;
 }
-input#lightInput:checked ~ #wrapper #mainNav .navBtn:after,
-input#lightInput:checked ~ #wrapper #mainNav .navBtn:before,
-input#lightInput:checked ~ #wrapper #mainNav .navBtn div {
+input#lightInput:checked ~ #wrapper .navBtn:after,
+input#lightInput:checked ~ #wrapper .navBtn:before,
+input#lightInput:checked ~ #wrapper .navBtn div {
   background-color: black;
 }
 
@@ -245,7 +282,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #wrapper #mainSection {
   display: inline-block;
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
 }
 #mainSection #introduction {
@@ -256,28 +293,31 @@ input#lightInput:checked ~ #wrapper .clearSections {
 }
 #introMessage h2 {
   position: relative;
-  top: 70px;
+  top: 50px;
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   color: white;
   mix-blend-mode: difference;
   z-index: 10;
 }
 #introMessage h2::before {
-  content: "Machine Learning";
+  content: "";
   display: block;
-  font-size: 3rem;
+  font-size: 2.2rem;
+  margin: 0 auto;
 }
 
 /* ML SECTION */
 
 #mlSection {
+  display: none;
   position: relative;
   width: 100%;
   height: 100%;
   background-color: white;
   outline: 1px solid black;
   outline-offset: 5px;
+  border-radius: 3px;
 }
 #mlSection #mlImg {
   width: 100%;
@@ -318,33 +358,35 @@ input#lightInput:checked ~ #wrapper .clearSections {
   height: 50%;
 }
 #mainSection #mlAside {
-  display: block;
+  display: none;
+}
+#mainSection aside {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
   padding: 1rem 1.4rem;
   font-size: 1.2rem;
 }
-#mlAside blockquote {
+#mainSection aside blockquote {
   background-color: rgba(0, 0, 0, .1);
   padding: 2.2rem 1.4rem;
   font-size: 1.4rem;
   outline: 1px solid black;
   outline-offset: 5px;
 }
-#mlAside blockquote:hover {
+#mainSection aside blockquote:hover {
   text-decoration: underline;
 }
-#mlAside blockquote span {
+#mainSection aside blockquote span {
   font-size: 2.4rem;
   color: rgb(221, 182, 78);
   padding: 0 .4rem;
 }
-#mlAside #mlIcons {
+#mainSection aside .iconsBox {
   outline: 1px solid black;
   outline-offset: 5px;
 }
-#mlAside #mlIcons #mlIconsBox {
+#mainSection aside .iconsBox .iconsUl {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -352,11 +394,11 @@ input#lightInput:checked ~ #wrapper .clearSections {
   padding: 0;
   background-color: rgba(0, 0, 0, .1);
 }
-#mlIconsBox li {
+#mainSection aside .iconsUl li {
   min-width: 80px;
   padding-top: 10px;
 }
-#mlIconsBox li img {
+#mainSection aside .iconsUl li img {
   display: inline-block;
   border-radius: 50%;
   width: 60px;
@@ -365,13 +407,105 @@ input#lightInput:checked ~ #wrapper .clearSections {
 }
 
 /* BITCOIN SECTION */
-#wrapper #bitcoinSection {
+#mainSection #bitcoinSection {
   display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  outline: 1px solid black;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+#bitcoinSection #bitcoinMessage {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 70px;
+  max-width: 600px;
+  color: black;
+  background: rgba(255, 255, 255, .9);
+  overflow-y: hidden;
+  cursor: pointer;
+  outline: 1px solid black;
+  outline-offset: -5px;
+  padding: 5px 10px;
+  font-size: 18px;
+  margin: 0 auto;
+  transition: margin 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+#bitcoinSection #bitcoinMessage h2 {
+  text-transform: uppercase;
+}
+#bitcoinSection #bitcoinMessage:hover h2 {
+  text-decoration: underline;
+}
+#bitcoinSection:hover #bitcoinMessage {
+  height: 50%;
+}
+#bitcoinSection #bitcoinImg {
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/bitcoin.png");
+  background-position: center center;
+  background-size: 300px auto;
+  background-repeat: no-repeat;
 }
 #wrapper #bitcoinAside {
   display: none;
 }
 
+/* APPS SECTION */
+#mainSection #appsSection {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  outline: 1px solid black;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+#appsSection #appsMessage {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 70px;
+  max-width: 600px;
+  color: black;
+  background: rgba(255, 255, 255, .9);
+  overflow-y: hidden;
+  cursor: pointer;
+  outline: 1px solid black;
+  outline-offset: -5px;
+  padding: 5px 10px;
+  font-size: 18px;
+  margin: 0 auto;
+  transition: margin 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+#appsSection #appsMessage h2 {
+  text-transform: uppercase;
+}
+#appsSection #appsMessage:hover h2 {
+  text-decoration: underline;
+}
+#appsSection:hover #appsMessage {
+  height: 50%;
+}
+#appsSection #appsImg {
+  height: 500px;
+}
+#wrapper #appsAside {
+  display: none;
+}
 
 /* FOOTER SECTION */
 
@@ -415,9 +549,6 @@ input#lightInput:checked ~ #wrapper .clearSections {
 /* MEDIA SECTION */
 
 @media (max-width: 600px) {
-  #mainNav {
-    background-color: rgba(0, 0, 0, .2);
-  }
   #mainNav > h2 {
     display: inline-block;
     float: left;
@@ -425,11 +556,11 @@ input#lightInput:checked ~ #wrapper .clearSections {
     padding: 0;
     height: 100%;
   }
-  #mainNav .navBtn {
+  .navBtn {
     position: relative;
     display: inline-block;
   }
-  #mainNav .navBtn > label {
+  .navBtn > label {
     position: absolute;
     top: 0;
     left: 0;
@@ -438,8 +569,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
     z-index: 10;
     cursor: pointer;
   }
-  #mainNav #mainNavUl {
-    position: relative;
+  #mainSection > label {
     width: calc(100% - 60px);
     height: 0;
     overflow-y: hidden;
@@ -447,22 +577,20 @@ input#lightInput:checked ~ #wrapper .clearSections {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-self: center;
-    margin: 0;
-    padding: 0;
     transition: height .3s ease-in-out;
   }
-  #mainNav #navCheck:checked ~ #mainNavUl {
-    height: 200px;
+  #navCheck:checked ~ label {
+    height: 50px;
   }
-  #mainNav #navCheck:checked ~ .navBtn:before {
+  #navCheck:checked ~ .navBtn:before {
     transform: translateY(9px) rotate(135deg);
   }
 
-  #mainNav #navCheck:checked ~ .navBtn:after {
+  #navCheck:checked ~ .navBtn:after {
     transform: translateY(-9px) rotate(-135deg);
   }
 
-  #mainNav #navCheck:checked ~ .navBtn div {
+  #navCheck:checked ~ .navBtn div {
     transform: scale(0);
   }
 }
