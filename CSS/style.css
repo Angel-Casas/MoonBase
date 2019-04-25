@@ -305,6 +305,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   display: block;
   font-size: 2.2rem;
   margin: 0 auto;
+  color: rgb(221, 182, 78);
 }
 
 /* ML SECTION */
@@ -322,7 +323,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #mlSection #mlImg {
   width: 100%;
   height: 500px;
-  background-image: url("../images/circleLab.png");
+  background-image: url("../images/circleLab3.png");
   background-position: center center;
   background-size: 300px auto;
   background-repeat: no-repeat;
@@ -371,6 +372,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   background-color: rgba(0, 0, 0, .1);
   padding: 2.2rem 1.4rem;
   font-size: 1.4rem;
+  line-height: 2.4rem;
   outline: 1px solid black;
   outline-offset: 5px;
 }
@@ -380,7 +382,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #mainSection aside blockquote span {
   font-size: 2.4rem;
   color: rgb(221, 182, 78);
-  padding: 0 .4rem;
+  padding: 0 .8rem;
 }
 #mainSection aside .iconsBox {
   outline: 1px solid black;
@@ -450,7 +452,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #bitcoinSection #bitcoinImg {
   width: 100%;
   height: 500px;
-  background-image: url("../images/bitcoin.png");
+  background-image: url("../images/bitcoin1.png");
   background-position: center center;
   background-size: 300px auto;
   background-repeat: no-repeat;
