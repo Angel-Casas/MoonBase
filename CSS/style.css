@@ -287,28 +287,31 @@ body {
 #mainSection #mlTab:checked ~ #introduction h2::before {
   content: "Machine Learning";
 }
-#mainSection #mlTab:checked ~ #mainSectionBox #mlSection,
+#mainSection #mlTab:checked ~ #mainSectionBox #mlSection {
+  display: block;
+}
+#mainSection #mlTab:checked ~ #mainSectionBox #mlIntro,
 #mainSection #mlTab:checked ~ #mainSectionBox #mlAside {
   display: block;
 }
 #mainSection #bitcoinTab:checked ~ #introduction h2::before {
   content: "Bitcoin";
 }
-#mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinSection,
+#mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinIntro,
 #mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinAside {
   display: block;
 }
 #mainSection #appsTab:checked ~ #introduction h2::before {
   content: "Apps";
 }
-#mainSection #appsTab:checked ~ #mainSectionBox #appsSection,
+#mainSection #appsTab:checked ~ #mainSectionBox #appsIntro,
 #mainSection #appsTab:checked ~ #mainSectionBox #appsAside {
   display: block;
 }
 #mainSection #blogTab:checked ~ #introduction h2::before {
   content: "Blog";
 }
-#mainSection #blogTab:checked ~ #mainSectionBox #blogSection,
+#mainSection #blogTab:checked ~ #mainSectionBox #blogIntro,
 #mainSection #blogTab:checked ~ #mainSectionBox #blogAside {
   display: block;
 }
@@ -413,7 +416,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 
 /* ML SECTION */
 
-#mlSection {
+.clearSections {
   display: none;
   position: relative;
   width: 100%;
@@ -423,7 +426,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   outline-offset: 5px;
   border-radius: 3px;
 }
-#mlSection #mlImg {
+#mlIntro #mlImg {
   width: 100%;
   height: 500px;
   background-image: url("../images/circleLab.png");
@@ -431,7 +434,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   background-size: 300px auto;
   background-repeat: no-repeat;
 }
-#mlSection #mlMessage {
+#mlIntro #mlMessage {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -452,13 +455,13 @@ input#lightInput:checked ~ #wrapper .clearSections {
   transition: margin 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
 }
-#mlSection #mlMessage h2 {
+#mlIntro #mlMessage h2 {
   text-transform: uppercase;
 }
-#mlSection #mlMessage:hover h2 {
+#mlIntro #mlMessage:hover h2 {
   text-decoration: underline;
 }
-#mlSection:hover #mlMessage {
+#mlIntro:hover #mlMessage {
   height: 50%;
 }
 #mainSection #mlAside {
@@ -511,19 +514,76 @@ input#lightInput:checked ~ #wrapper .clearSections {
   height: 60px;
   border: 1px solid rgb(221, 182, 78);
 }
-
-/* BITCOIN SECTION */
-#mainSection #bitcoinSection {
+#mainSection .blogSection {
   display: none;
-  position: relative;
-  width: 100%;
-  height: 100%;
+}
+#mainSection .blogArticles {
   background-color: white;
   outline: 1px solid black;
-  outline-offset: 5px;
-  border-radius: 3px;
+  outline-offset: -5px;
+  color: black;
 }
-#bitcoinSection #bitcoinMessage {
+#mainSection .blogSection h5 {
+  font-size: 2.8rem;
+  color: rgb(221, 182, 78);
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+#mainSection .blogArticles .previewBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#mainSection .blogArticles .previewPost {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 3px solid rgb(221, 182, 78);
+  border-radius: 10px;
+  margin: .8rem;
+  transition: all .3s ease-in-out;
+  background: url("../images/preview3.png");
+  background-repeat: no-repeat;
+  background-size: 600px auto;
+  background-position: left center;
+}
+#mainSection .blogArticles .previewPost:hover {
+  background-position: right center;
+}
+#mainSection .blogArticles .previewPost h6 {
+  font-size: 2.8rem;
+  color: rgb(221, 182, 78);
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+#mainSection .blogArticles .previewPost .excerpt {
+  background-color: rgba(255, 255, 255, .8);
+  padding: .4rem;
+}
+#mainSection .blogArticles .previewPost .postDate {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#mainSection .blogFooter {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+#mainSection .previousPost {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+#mainSection .previousPost span {
+  transition: margin .3s ease-in-out;
+}
+#mainSection .previousPost:hover span {
+  margin-left: 10px;
+}
+
+/* BITCOIN SECTION */
+#bitcoinIntro #bitcoinMessage {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -544,16 +604,16 @@ input#lightInput:checked ~ #wrapper .clearSections {
   transition: margin 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
 }
-#bitcoinSection #bitcoinMessage h2 {
+#bitcoinIntro #bitcoinMessage h2 {
   text-transform: uppercase;
 }
-#bitcoinSection #bitcoinMessage:hover h2 {
+#bitcoinIntro #bitcoinMessage:hover h2 {
   text-decoration: underline;
 }
-#bitcoinSection:hover #bitcoinMessage {
+#bitcoinIntro:hover #bitcoinMessage {
   height: 50%;
 }
-#bitcoinSection #bitcoinImg {
+#bitcoinIntro #bitcoinImg {
   width: 100%;
   height: 500px;
   background-image: url("../images/bitcoin1.png");
@@ -566,17 +626,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 }
 
 /* APPS SECTION */
-#mainSection #appsSection {
-  display: none;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  outline: 1px solid black;
-  outline-offset: 5px;
-  border-radius: 3px;
-}
-#appsSection #appsMessage {
+#appsIntro #appsMessage {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -597,16 +647,16 @@ input#lightInput:checked ~ #wrapper .clearSections {
   transition: margin 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
 }
-#appsSection #appsMessage h2 {
+#appsIntro #appsMessage h2 {
   text-transform: uppercase;
 }
-#appsSection #appsMessage:hover h2 {
+#appsIntro #appsMessage:hover h2 {
   text-decoration: underline;
 }
-#appsSection:hover #appsMessage {
+#appsIntro:hover #appsMessage {
   height: 50%;
 }
-#appsSection #appsImg {
+#appsIntro #appsImg {
   height: 500px;
   width: 100%;
   background-image: url("../images/check2.png");
@@ -625,13 +675,21 @@ input#lightInput:checked ~ #wrapper .clearSections {
   width: 100%;
   background-color: rgba(0, 0, 0, .1);
 }
-#mainFooter #personalQuote p {
+#mainFooter > a {
+  display: block;
+}
+#mainFooter #footerBox {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+#mainFooter #footerBox p {
   font-size: 1.8rem;
 }
-#personalQuote p:first-child {
+#footerBox p:first-child {
   font-size: 2.8rem;
 }
-#personalQuote #footerIconBox {
+#footerBox #footerIconBox {
   display: inline-block;
   width: 100%;
 }
@@ -641,20 +699,35 @@ input#lightInput:checked ~ #wrapper .clearSections {
   font-weight: 800;
 }
 #footerIconBox #footerIcons {
-  border-top: 2px solid rgb(221, 182, 78);
-  border-bottom: 2px solid rgb(221, 182, 78);
-  width: 300px;
+  border-left: 2px solid rgb(221, 182, 78);
+  border-right: 2px solid rgb(221, 182, 78);
+  width: 100px;
   margin: 0 auto;
   padding: 5px 0;
 }
-#personalQuote #footerIconBox i {
+#footerBox #footerIconBox i {
   margin: 0 1.2rem;
   color: rgb(221, 182, 78);
   transition: color .2s ease-in-out;
 }
-#personalQuote #footerIconBox i:hover {
+#footerBox #footerIconBox i:hover {
   color: rgb(255, 126, 62);
 }
+#footerBox .footerDiv {
+  margin: .8rem;
+}
+#footerBox .footerDiv h6 {
+  font-size: 1.8rem;
+  white-space: nowrap;
+  color: rgb(221, 182, 78);
+}
+#footerBox .footerDiv span {
+  color: rgb(221, 182, 78);
+}
+#footerBox .footerDiv a {
+  color: rgb(221, 182, 78);
+}
+
 
 
 /* MEDIA SECTION */
@@ -703,5 +776,14 @@ input#lightInput:checked ~ #wrapper .clearSections {
 
   #navCheck:checked ~ .navBtn div {
     transform: scale(0);
+  }
+  #mainFooter #footerBox {
+    flex-flow: column nowrap;
+  }
+  #mainFooter #footerBox #footerIcons {
+    width: 300px;
+  }
+  #mainFooter #footerBox .footerDiv {
+    border-bottom: 2px solid rgb(221, 182, 78);
   }
 }

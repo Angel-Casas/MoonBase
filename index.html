@@ -60,9 +60,9 @@
         </div>
       </div>
       <div id="mainSectionBox">
-        <div id="mlSection" class="clearSections">
+        <div id="mlIntro" class="clearSections">
           <div id="mlImg"></div>
-          <a href="https://angel-casas.github.io/">
+          <a href="#mlAside">
             <div class="upArrow"></div>
             <div id="mlMessage">
               <h2>Visit</h2>
@@ -70,11 +70,8 @@
             </div>
           </a>
         </div>
-        <!-- End of #mlSection -->
+        <!-- End of #mlIntro -->
         <aside id="mlAside">
-          <p>Computer Science has always been seeking to unravel the intricacies of defining
-          a well formed problem in computer language in order to reach a successful completion
-          of such a problem.</p>
           <blockquote cite="https://www.azquotes.com/quote/847377">
             <a href="https://www.azquotes.com/quote/847377"><span>“</span>Programming is a skill best acquired by practice and example rather than from books <span>”</span><br>
             - Alan Turing -</a>
@@ -91,7 +88,54 @@
           </div>
         </aside>
         <!-- End of #mlAside -->
-        <div id="bitcoinSection" class="clearSections">
+        <section id="mlSection" class="blogSection">
+          <h5>Posts</h5>
+          <div class="blogArticles">
+            <section class="previewBox">
+              <a href="">
+                <div class="previewPost">
+                  <h6>Neural Machine Translation</h6>
+                  <p class="excerpt">Artificial intelligence has seen a rise in popularity, over the past few years, due to the development of new architectures and increased availability of data...</p>
+                  <p class="postDate">Wednesday, November 8th, 2017</p>
+                </div>
+              </a>
+              <a href="">
+                <div class="previewPost">
+                  <h6>PyTorch</h6>
+                  <p class="excerpt">PyTorch has proven to be a very useful tool for Computer Science and the study of Machine Learning...</p>
+                  <p class="postDate">Monday, April 29th, 2019</p>
+                </div>
+              </a>
+            </section>
+          </div>
+          <div class="blogComment">
+            <div id="disqus_thread"></div>
+            <script>
+
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://angelcasas.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+          <div class="blogFooter">
+            <p>Page <span>1</span> of <span>1</span></p>
+            <a href="" class="previousPost">Previous post <span class="ra">&#8250;</span></a>
+          </div>
+        </section>
+        <div id="bitcoinIntro" class="clearSections">
           <div id="bitcoinImg"></div>
           <a href="">
             <div class="upArrow"></div>
@@ -101,7 +145,7 @@
             </div>
           </a>
         </div>
-        <!-- End of #bitcoinSection -->
+        <!-- End of #bitcoinIntro -->
         <aside id="bitcoinAside">
           <p>Bitcoin is a new digital tool to transfer value between two or more individuals without an intermediary. Being a digital form of money it is proving to be a revolution worth checking out!</p>
           <blockquote cite="https://www.brainyquote.com/quotes/milton_friedman_851204">
@@ -119,7 +163,7 @@
             </ul>
           </div>
         </aside>
-        <div id="appsSection" class="clearSections">
+        <div id="appsIntro" class="clearSections">
           <div id="appsImg"></div>
           <a href="">
             <div class="upArrow"></div>
@@ -130,6 +174,7 @@
             </div>
           </a>
         </div>
+        <!-- End of #appsIntro -->
         <aside id="appsAside">
           <p></p>
           <blockquote cite="">
@@ -146,15 +191,15 @@
             </ul>
           </div>
         </aside>
-        <!-- End of #appsSection -->
-        <div id="blogSection" class="clearSections">
+        <!-- End of #appsAside -->
+        <div id="blogIntro" class="clearSections">
 
         </div>
-        <!-- End of #blogSection -->
-        <div id="aboutSection" class="clearSections">
+        <!-- End of #blogIntro -->
+        <div id="aboutIntro" class="clearSections">
 
         </div>
-        <!-- End of #aboutSection -->
+        <!-- End of #aboutIntro -->
       </div>
       <!-- End of #mainSectionBox -->
     </section>
@@ -173,7 +218,7 @@
           </div>
         </div>
       </a>
-      <div id="personalQuote">
+      <div id="footerBox">
         <span id="footerIconBox">
           <p>Follow me on:</p>
           <div id="footerIcons">
@@ -189,13 +234,24 @@
           </div>
           <!-- End of #footerIcons -->
         </span>
-        <p>- “Si no demolemos nuestros prejuicios, ¿cómo podremos comprender la grandeza del mundo?” -</p>
-        <p>Ángel Casas Pescador - Copyright - All rights reserved</p>
+        <!-- End of #footerIconBox -->
+        <div class="footerDiv">
+          <p><span>“</span>Si no demolemos nuestros prejuicios, ¿cómo podremos comprender la grandeza del mundo?<span>”</span></p>
+        </div>
+        <div class="footerDiv">
+          <h6>Ángel Casas Pescador</h6>
+          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+        </div>
+        <div class="footerDiv">
+          <h6>Disclaimer</h6>
+          <p>Opinions expressed here are my own and may not reflect those of people I work with. Unless I'm quoting someone, they're just my own views.</p>
+        </div>
       </div>
-      <!-- End of #personalQuote -->
+      <!-- End of #footerDiv -->
     </footer>
     <!-- End of #mainFooter -->
   </div>
   <!-- End of #wrapper -->
+<script id="dsq-count-scr" src="//angelcasas.disqus.com/count.js" async></script>
 </body>
 </html>
