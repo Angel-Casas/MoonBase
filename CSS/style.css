@@ -118,6 +118,20 @@ body {
   font-family: 'Playfair Display', serif;
   color: white;
 }
+h4, h5, h6 {
+  color: rgb(221, 182, 78);
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+h4 {
+  font-size: 3.4rem;
+}
+h5 {
+  font-size: 3.2rem;
+}
+h6 {
+  font-size: 2.8rem;
+}
 #wrapper {
   width: 100%;
   height: 100%;
@@ -520,8 +534,9 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #mainSection .blogArticles {
   background-color: white;
   outline: 1px solid black;
-  outline-offset: -5px;
+  outline-offset: 5px;
   color: black;
+  margin: 5px;
 }
 #mainSection .blogSection h5 {
   font-size: 2.8rem;
@@ -534,6 +549,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 2px solid rgb(221, 182, 78);
 }
 #mainSection .blogArticles .previewPost {
   position: relative;
@@ -551,15 +567,15 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #mainSection .blogArticles .previewPost:hover {
   background-position: right center;
 }
-#mainSection .blogArticles .previewPost h6 {
-  font-size: 2.8rem;
-  color: rgb(221, 182, 78);
-  text-transform: uppercase;
-  mix-blend-mode: difference;
-}
-#mainSection .blogArticles .previewPost .excerpt {
+#mainSection .blogArticles .previewPost .tags {
   background-color: rgba(255, 255, 255, .8);
   padding: .4rem;
+}
+#mainSection .blogArticles .previewPost .tags::before {
+  content: "Tags:";
+  display: block;
+  text-transform: uppercase;
+  color: rgb(221, 182, 78);
 }
 #mainSection .blogArticles .previewPost .postDate {
   font-size: 1.2rem;
@@ -568,15 +584,21 @@ input#lightInput:checked ~ #wrapper .clearSections {
   right: 0;
 }
 #mainSection .blogFooter {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  width: 200px;
+  margin: 1.4rem auto;
+  border-top: 1px solid black;
+  color: rgb(140, 140, 140);
 }
 #mainSection .previousPost {
   display: inline-block;
   font-size: 1.8rem;
 }
 #mainSection .previousPost span {
-  transition: margin .3s ease-in-out;
+  transition: margin .2s ease-in-out;
+}
+#mainSection .previousPost:hover {
+  color: black;
 }
 #mainSection .previousPost:hover span {
   margin-left: 10px;
@@ -719,6 +741,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #footerBox .footerDiv h6 {
   font-size: 1.8rem;
   white-space: nowrap;
+  mix-blend-mode: normal;
   color: rgb(221, 182, 78);
 }
 #footerBox .footerDiv span {
