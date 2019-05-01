@@ -421,7 +421,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   content: "";
   display: block;
   font-size: 3.4rem;
-  margin: 0 auto;
+  margin: 60px auto 0;
   color: rgb(221, 182, 78);
 }
 
@@ -457,7 +457,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   margin: 2.2rem 0;
   font-size: 2rem;
   line-height: 2.4rem;
-  outline: 1px solid black;
+  outline: 1px solid rgb(221, 182, 78);
   outline-offset: 5px;
 }
 #mainSection aside blockquote:hover {
@@ -469,7 +469,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   padding: 0 .8rem;
 }
 #mainSection aside .iconsBox {
-  outline: 1px solid black;
+  outline: 1px solid rgb(221, 182, 78);
   outline-offset: 5px;
   margin: 2.2rem 0;
 }
@@ -496,7 +496,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   display: none;
 }
 #mainSection .blogArticles {
-  outline: 1px solid black;
+  outline: 1px solid rgb(221, 182, 78);
   outline-offset: 5px;
   margin: 5px;
 }
