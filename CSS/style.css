@@ -322,7 +322,7 @@ h6 {
   display: block;
 }
 #mainSection #blogTab:checked ~ #introduction h2::before {
-  content: "Blog";
+  content: "Books";
 }
 #mainSection #blogTab:checked ~ #mainSectionBox #blogIntro,
 #mainSection #blogTab:checked ~ #mainSectionBox #blogAside {
