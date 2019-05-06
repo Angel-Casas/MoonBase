@@ -395,7 +395,7 @@ input#lightInput:checked ~ #wrapper {
 input#lightInput:checked ~ #wrapper .navBtn:after,
 input#lightInput:checked ~ #wrapper .navBtn:before,
 input#lightInput:checked ~ #wrapper .navBtn div {
-  background-co%;lor: black;
+  background-color: black;
 }
 
 input#lightInput:checked ~ #wrapper .circleIcon .circle {
@@ -407,10 +407,8 @@ input#lightInput:checked ~ #wrapper .clearSections {
 
 /* MAIN SECTION */
 #wrapper #mainSection {
-  display: flex;
-  flex-flow: row wrap;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 #mainSection #introduction {
@@ -445,7 +443,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #mainSection .blogNav {
   border-right: 1px solid rgb(221, 182, 78);
 }
-#mainSection .blogNav .blogNavUl {
+#mainSection .blogNav > .blogNavUl {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -462,11 +460,16 @@ input#lightInput:checked ~ #wrapper .clearSections {
 	display: block;
 	left: -10px;
 	position: absolute;
+  cursor: pointer;
 }
 #mainSection .blogNav .blogNavLi:hover,
 #mainSection .blogNav .blogNavLi:hover::before,
 #mainSection .blogNav .blogNavLi:focus::before {
   color: rgb(221, 182, 78);
+}
+#mainSection .blogNav .blogNavLiChild {
+  font-size: 1.4rem;
+  opacity: .7;
 }
 
 /* ML SECTION */
@@ -534,28 +537,36 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #mainSection .blogSection {
   display: none;
 }
-#mainSection .blogArticles {
-  outline: 1px solid rgb(221, 182, 78);
-  outline-offset: 5px;
-  margin: 5px;
+#mainSection .blogSection h4 {
+  margin: 2.8rem 0;
 }
 #mainSection .blogSection h5 {
   font-size: 2.8rem;
   color: rgb(221, 182, 78);
   text-transform: uppercase;
   mix-blend-mode: difference;
+  margin: 2.2rem 0;
+}
+#mainSection .blogArticles {
+  outline: 1px solid rgb(221, 182, 78);
+  outline-offset: 5px;
+  margin: 5px;
+}
+#mainSection .blogArticles .previewSection {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(221, 182, 78);
 }
 #mainSection .blogArticles .previewBox {
-  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  max-height: 240px;
   overflow: hidden;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid rgb(221, 182, 78);
+  transition: all .4s ease-in-out;
 }
-#mainSection .blogArticles .previewPost {
+#mainSection .previewBox .previewPost {
   position: relative;
   width: 300px;
   height: 200px;
@@ -565,48 +576,59 @@ input#lightInput:checked ~ #wrapper .clearSections {
   transition: all .3s ease-in-out;
   background-color: rgb(255, 255, 255);
 }
-#mainSection .blogArticles .previewPost .tags {
+#mainSection .previewBox .previewPost .tags {
   background-color: rgba(255, 255, 255, .8);
   padding: .4rem;
   color: black;
 }
-#mainSection .blogArticles .previewPost .tags::before {
+#mainSection .previewBox .previewPost .tags::before {
   content: "Tags:";
   display: block;
   text-transform: uppercase;
   color: rgb(221, 182, 78);
 }
-#mainSection .blogArticles .previewPost .postDate {
+#mainSection .previewBox .previewPost .postDate {
   font-size: 1.2rem;
   position: absolute;
   bottom: 0;
   right: 0;
 }
-#mainSection .blogArticles .previewExpand {
-  position: relative;
-  width: 150px;
-  height: 50px;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  color: rgb(221, 182, 78);
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-}
-#mainSection .blogArticles .previewExpand:hover,
-#mainSection .blogArticles .previewExpand:focus {
-  background-color: rgb(221, 182, 78);
-  color: white;
-}
-#mainSection .blogArticles .previewExpand span {
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  border-bottom: 30px solid rgb(221, 182, 78);
+#mainSection .blogArticles input[type="checkbox"] {
   position: absolute;
-  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#mainSection .blogArticles input[type="checkbox"]:checked + label::before,
+#mainSection .blogArticles input[type="checkbox"]:checked + label::after {
+  content: "\2191";
+}
+#mainSection .blogArticles input[type="checkbox"]:checked ~ .previewBox {
+  max-height: 500px;
+}
+#mainSection .blogArticles label:hover,
+#mainSection .blogArticles input[type="checkbox"]:focus ~ label {
+  font-weight: 800;
+}
+#mainSection .blogArticles label {
+  position: absolute;
   left: 0;
+  bottom: 10px;
   width: 100%;
+  height: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+#mainSection .blogArticles label::before,
+#mainSection .blogArticles label::after {
+  content: "\2193";
+  margin: 0 20px;
+  font-size: 2.4rem;
+  color: rgb(221, 182, 78);
+}
+#mainSection .blogArticles .post {
+  margin-top: 80px;
 }
 #mainSection .blogFooter {
   font-size: 1.6rem;
@@ -661,7 +683,6 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #wrapper #mainFooter {
   width: 100%;
   font-family: 'Libre Baskerville', Georgia, serif;
-  font-style: italic;
   background-color: rgba(0, 0, 0, .1);
   padding: 10px 0 50px;
 }
@@ -684,6 +705,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   display: inline-block;
   width: 100%;
   height: 100%;
+  margin: .8rem;
 }
 #footerIconBox > p {
   display: block;
@@ -699,7 +721,6 @@ input#lightInput:checked ~ #wrapper .clearSections {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 5px 0;
 }
 #footerBox #footerIconBox i {
   margin: 0 1.2rem;
@@ -716,6 +737,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 }
 #footerBox .footerDiv {
   margin: .8rem;
+  font-style: italic;
 }
 #footerBox h6 {
   font-size: 1.6rem;
@@ -795,7 +817,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
     border-top: 2px solid rgb(221, 182, 78);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   #mainSection .blogAside {
     width: 300px;
     height: auto;

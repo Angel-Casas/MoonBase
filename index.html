@@ -62,8 +62,18 @@
       <aside class="blogAside">
         <nav class="blogNav">
           <ul class="blogNavUl">
-            <li class="blogNavLi"><a href="" class="blogNavA">Neural Machine Translation</a> </li>
-            <li class="blogNavLi"><a href="" class="blogNavA">Great Pioneers</a></li>
+            <li class="blogNavLi">
+              <a href="" class="blogNavA">Neural Machine Translation</a>
+              <ul class="blogNavUl">
+                <li class="blogNavLiChild">Introduction</li>
+              </ul>
+            </li>
+            <li class="blogNavLi">
+              <a href="" class="blogNavA">Great Pioneers</a>
+              <ul class="blogNavUl">
+                <li class="blogNavLiChild">Ada Lovelace and Alan Turing</li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </aside>
@@ -93,22 +103,25 @@
         <section id="mlSection" class="blogSection">
           <h5>Posts</h5>
           <div class="blogArticles">
-            <section class="previewBox">
-              <a href="">
-                <div class="previewPost">
-                  <h6>Neural Machine Translation</h6>
-                  <p class="tags">Artificial Intelligence, History, Programming</p>
-                  <p class="postDate">Wednesday, November 8th, 2017</p>
-                </div>
-              </a>
-              <a href="">
-                <div class="previewPost">
-                  <h6>PyTorch</h6>
-                  <p class="tags">Artificial Intelligence, Python</p>
-                  <p class="postDate">Monday, April 29th, 2019</p>
-                </div>
-              </a>
-              <button class="previewExpand"><span>View All</span></button>
+            <section class="previewSection">
+              <input type="checkbox" id="mlPreviewExpand"></input>
+              <label for="mlPreviewExpand" class="previewExpandLabel">View All</label>
+              <div class="previewBox">
+                <a href="">
+                  <div class="previewPost">
+                    <h6>Neural Machine Translation</h6>
+                    <p class="tags">Artificial Intelligence, History, Programming</p>
+                    <p class="postDate">Wednesday, November 8th, 2017</p>
+                  </div>
+                </a>
+                <a href="">
+                  <div class="previewPost">
+                    <h6>PyTorch</h6>
+                    <p class="tags">Artificial Intelligence, Python</p>
+                    <p class="postDate">Monday, April 29th, 2019</p>
+                  </div>
+                </a>
+              </div>
             </section>
             <article class="post">
               <header>
@@ -117,13 +130,12 @@
                   <time datetime="2017-11-03" pubdate>Wednesday, November 8th, 2017</time>
                   by
                   <a href="#aboutIntro" title="About Ángel Casas Pescador" rel="author">Ángel Casas</a>
-                  .
+                  <p class="tweet">
+                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.c7112f7adf6a24ddcb78d834866e1439.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=&amp;size=m&amp;text=" style="position: static; visibility: visible; width: 61px; height: 20px;"></iframe>
+                    <script type="text/javascript" src="http://platform.twitter.com/widgets.js">
+                    </script>
+                  </p>
                 </small>
-                <p class="tweet">
-                  <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.c7112f7adf6a24ddcb78d834866e1439.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=&amp;size=m&amp;text=" style="position: static; visibility: visible; width: 61px; height: 20px;"></iframe>
-                  <script type="text/javascript" src="http://platform.twitter.com/widgets.js">
-                  </script>
-                </p>
               </header>
               <!-- end header -->
               <div class="entry">
