@@ -395,7 +395,7 @@ input#lightInput:checked ~ #wrapper {
 input#lightInput:checked ~ #wrapper .navBtn:after,
 input#lightInput:checked ~ #wrapper .navBtn:before,
 input#lightInput:checked ~ #wrapper .navBtn div {
-  background-color: black;
+  background-co%;lor: black;
 }
 
 input#lightInput:checked ~ #wrapper .circleIcon .circle {
@@ -407,9 +407,10 @@ input#lightInput:checked ~ #wrapper .clearSections {
 
 /* MAIN SECTION */
 #wrapper #mainSection {
-  display: inline-block;
+  display: flex;
+  flex-flow: row wrap;
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
 }
 #mainSection #introduction {
@@ -431,6 +432,40 @@ input#lightInput:checked ~ #wrapper .clearSections {
   display: block;
   font-size: 3.4rem;
   margin: 60px auto 0;
+  color: rgb(221, 182, 78);
+}
+#mainSection .blogAside {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+#mainSection .blogNav {
+  border-right: 1px solid rgb(221, 182, 78);
+}
+#mainSection .blogNav .blogNavUl {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#mainSection .blogNav .blogNavLi {
+  position: relative;
+  transition: color .3s ease-in-out;
+  padding: 2rem 0;
+}
+#mainSection .blogNav .blogNavLi:hover::before,
+#mainSection .blogNav .blogNavLi:focus::before {
+  content: "\203A";
+	display: block;
+	left: -10px;
+	position: absolute;
+}
+#mainSection .blogNav .blogNavLi:hover,
+#mainSection .blogNav .blogNavLi:hover::before,
+#mainSection .blogNav .blogNavLi:focus::before {
   color: rgb(221, 182, 78);
 }
 
@@ -648,6 +683,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
 #footerBox #footerIconBox {
   display: inline-block;
   width: 100%;
+  height: 100%;
 }
 #footerIconBox > p {
   display: block;
@@ -757,5 +793,18 @@ input#lightInput:checked ~ #wrapper .clearSections {
   }
   #mainFooter #footerBox .footerDiv {
     border-top: 2px solid rgb(221, 182, 78);
+  }
+}
+@media (min-width: 1200px) {
+  #mainSection .blogAside {
+    width: 300px;
+    height: auto;
+    position: fixed;
+    left: 0;
+    top: 20%;
+  }
+  #mainSection .blogNav {
+    width: 100%;
+    height: 100%;
   }
 }
