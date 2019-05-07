@@ -353,7 +353,7 @@ blockquote span {
   height: 25px;
   width: 100px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 5px;
   text-transform: uppercase;
   mix-blend-mode: exclusion;
@@ -386,7 +386,7 @@ input#lightInput:checked + #lightLabel span::after {
   left: 40px;
 }
 input#lightInput:checked + #lightLabel:hover span::after {
-  left: 50px;
+  left: 60px;
 }
 input#lightInput:checked ~ #wrapper {
   background: white;
@@ -404,7 +404,7 @@ input#lightInput:checked ~ #wrapper .circleIcon .circle {
 input#lightInput:checked ~ #wrapper .clearSections {
 }
 input#lightInput:checked ~ #wrapper #mainSection .blogComment {
-  color: black;  
+  color: black;
 }
 
 
