@@ -127,10 +127,10 @@ h4 {
   font-size: 3.4rem;
 }
 h5 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
 }
 h6 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
 }
 blockquote {
   font-family: 'Cinzel', serif;
@@ -347,7 +347,7 @@ blockquote span {
 }
 #lightLabel {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 10px;
   height: 25px;
@@ -448,6 +448,7 @@ input#lightInput:checked ~ #wrapper .clearSections {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(0, 0, 0, .1);
 }
 #mainSection .blogNav .blogNavLi {
   position: relative;
@@ -471,7 +472,9 @@ input#lightInput:checked ~ #wrapper .clearSections {
   font-size: 1.4rem;
   opacity: .7;
 }
-
+#mainSection .blogArticles .tweet {
+  margin-bottom: 50px;
+}
 /* ML SECTION */
 
 .clearSections {
@@ -541,7 +544,6 @@ input#lightInput:checked ~ #wrapper .clearSections {
   margin: 2.8rem 0;
 }
 #mainSection .blogSection h5 {
-  font-size: 2.8rem;
   color: rgb(221, 182, 78);
   text-transform: uppercase;
   mix-blend-mode: difference;
@@ -573,8 +575,6 @@ input#lightInput:checked ~ #wrapper .clearSections {
   border: 3px solid rgb(221, 182, 78);
   border-radius: 10px;
   margin: 2rem;
-  transition: all .3s ease-in-out;
-  background-color: rgb(255, 255, 255);
 }
 #mainSection .previewBox .previewPost .tags {
   background-color: rgba(255, 255, 255, .8);
@@ -585,7 +585,9 @@ input#lightInput:checked ~ #wrapper .clearSections {
   content: "Tags:";
   display: block;
   text-transform: uppercase;
-  color: rgb(221, 182, 78);
+}
+#mainSection .previewBox .previewPost .tags a:hover {
+  text-decoration: underline;
 }
 #mainSection .previewBox .previewPost .postDate {
   font-size: 1.2rem;
