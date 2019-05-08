@@ -169,12 +169,41 @@ blockquote span {
 }
 #mainNav > a {
   display: inline-block;
-}
-.circleIcon {
   width: 50px;
   height: 50px;
+}
+.circleIcon {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: inline-block;
-  margin: 3px 0;
+}
+.circleIcon::before,
+.circleIcon::after {
+  opacity: 0;
+  transition: opacity .4s ease-in-out;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.circleIcon::before {
+  position: relative;
+  bottom: -35px;
+  left: -140%;
+  content: "Ángel";
+  display: inline-block;
+}
+.circleIcon::after {
+  position: relative;
+  right: -140%;
+  bottom: 35px;
+  content: "Casas";
+  display: inline-block;
+}
+.circleIcon:hover::before,
+.circleIcon:hover::after,
+.circleIcon:focus::before,
+.circleIcons:focus::after {
+  opacity: 1;
 }
 .circleIcon .circleBox {
   width: 100%;
@@ -513,8 +542,11 @@ input#lightInput:checked ~ #wrapper #mainSection .blogComment {
   outline: 1px solid rgb(221, 182, 78);
   outline-offset: 5px;
 }
-#mainSection aside blockquote:hover {
+#mainSection aside blockquote a:hover {
   text-decoration: underline;
+}
+#mainSection aside blockquote span {
+  text-decoration: none;
 }
 #mainSection aside .iconsBox {
   outline: 1px solid rgb(221, 182, 78);
@@ -538,7 +570,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogComment {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 1px solid rgb(221, 182, 78);
+  border: 2px solid rgb(221, 182, 78);
 }
 #mainSection .blogSection {
   display: none;
@@ -613,7 +645,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogComment {
   max-height: 500px;
 }
 #mainSection .blogArticles label:hover,
-#mainSection .blogArticles input[type="checkbox"]:focus ~ label {
+#mainSection .blogArticles label:focus {
   font-weight: 800;
 }
 #mainSection .blogArticles label {
@@ -692,7 +724,9 @@ input#lightInput:checked ~ #wrapper #mainSection .blogComment {
   padding: 10px 0 50px;
 }
 #mainFooter > a {
-  display: block;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
 }
 #mainFooter #footerBox {
   display: flex;
