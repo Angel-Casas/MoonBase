@@ -433,7 +433,6 @@ input#lightInput:checked ~ #wrapper .clearSections {
 }
 input#lightInput:checked ~ #wrapper #mainSection .blogComment {
   background-color: rgba(0, 0, 0, .1);
-  color: black;
 }
 
 
