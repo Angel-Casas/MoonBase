@@ -178,32 +178,6 @@ blockquote span {
   height: 100%;
   display: inline-block;
 }
-.circleIcon::before,
-.circleIcon::after {
-  position: relative;
-  opacity: 0;
-  transition: opacity .4s ease-in-out;
-  text-transform: uppercase;
-  font-size: 15px;
-}
-.circleIcon::before {
-  left: -160%;
-  bottom: -35px;
-  content: "Ángel";
-  display: inline-block;
-}
-.circleIcon::after {
-  right: -160%;
-  bottom: 37px;
-  content: "Casas";
-  display: inline-block;
-}
-.circleIcon:hover::before,
-.circleIcon:hover::after,
-.circleIcon:focus::before,
-.circleIcons:focus::after {
-  opacity: 1;
-}
 .circleIcon .circleBox {
   width: 100%;
   height: 100%;
