@@ -405,7 +405,7 @@ input#lightInput:checked ~ #wrapper .circleIcon .circle {
 }
 input#lightInput:checked ~ #wrapper .clearSections {
 }
-input#lightInput:checked ~ #wrapper #mainSection .blogComment {
+input#lightInput:checked ~ #wrapper #mainSection #blogComments {
   background-color: rgba(0, 0, 0, .1);
 }
 
@@ -637,6 +637,25 @@ input#lightInput:checked ~ #wrapper #mainSection .blogComment {
   font-size: 2.4rem;
   color: rgb(221, 182, 78);
 }
+#mainSection .post header {
+}
+#mainSection .post .entryDate,
+#mainSection .post .entryComments {
+  font-style: italic;
+  display: inline;
+}
+#mainSection .post .entryComments::before {
+  content: "\2014";
+  display: inline;
+  padding: 0 2px 0 0;
+}
+#mainSection .post .tweet {
+  display: inline-block;
+  margin: 0 auto;
+}
+#mainSection .post a {
+  font-weight: 800;
+}
 #mainSection .blogArticles .post {
   margin-top: 80px;
 }
@@ -682,7 +701,6 @@ input#lightInput:checked ~ #wrapper #mainSection .blogComment {
 #mainSection .previousPost:hover span,
 #mainSection .previousPost:focus span {
   margin: 0 10px;
-  text-decoration: underline;
 }
 
 /* BITCOIN SECTION */
