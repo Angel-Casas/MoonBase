@@ -408,6 +408,12 @@ input#lightInput:checked ~ #wrapper .clearSections {
 input#lightInput:checked ~ #wrapper #mainSection #blogComments {
   background-color: rgba(0, 0, 0, .1);
 }
+input#lightInput:checked ~ #wrapper #mainSection .blogFooter .previousBox span {
+  color: black;
+}
+input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
+  color: rgba(0, 0, 0, .5);
+}
 
 
 /* MAIN SECTION */
@@ -476,9 +482,6 @@ input#lightInput:checked ~ #wrapper #mainSection #blogComments {
 #mainSection #blogNav .blogNavLiChild {
   font-size: 1.4rem;
   opacity: .7;
-}
-#mainSection .blogArticles .tweet {
-  margin-bottom: 50px;
 }
 /* ML SECTION */
 
@@ -637,7 +640,10 @@ input#lightInput:checked ~ #wrapper #mainSection #blogComments {
   font-size: 2.4rem;
   color: rgb(221, 182, 78);
 }
-#mainSection .post header {
+#mainSection .post .entryTags {
+}
+#mainSection .post header a:hover {
+  opacity: 0.6;
 }
 #mainSection .post .entryDate,
 #mainSection .post .entryComments {
@@ -648,10 +654,6 @@ input#lightInput:checked ~ #wrapper #mainSection #blogComments {
   content: "\2014";
   display: inline;
   padding: 0 2px 0 0;
-}
-#mainSection .post .tweet {
-  display: inline-block;
-  margin: 0 auto;
 }
 #mainSection .post a {
   font-weight: 800;
@@ -676,7 +678,7 @@ input#lightInput:checked ~ #wrapper #mainSection #blogComments {
 }
 #mainSection .blogFooter {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
   font-size: 1.6rem;
@@ -685,22 +687,42 @@ input#lightInput:checked ~ #wrapper #mainSection #blogComments {
   width: 100%;
   height: 100%;
   margin: 1.4rem auto;
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(221, 182, 78);
+}
+#mainSection .blogFooter h6 {
+  font-size: 1.2rem;
+  margin: 5px 0;
 }
 #mainSection .blogFooter p {
   display: inline-block;
   width: 100%;
 }
-#mainSection .previousPost {
-  display: inline-block;
-  white-space: nowrap;
+#mainSection .blogFooter .shareBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#mainSection .blogFooter .previousBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#mainSection .blogFooter a:hover {
+  color: rgba(255, 255, 255, .5);
 }
 #mainSection .previousPost span {
-  transition: margin .2s ease-in-out;
-}
-#mainSection .previousPost:hover span,
-#mainSection .previousPost:focus span {
-  margin: 0 10px;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: white;
+  padding-bottom: 4px;
 }
 
 /* BITCOIN SECTION */
