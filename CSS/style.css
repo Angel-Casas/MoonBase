@@ -405,9 +405,6 @@ input#lightInput:checked ~ #wrapper .circleIcon .circle {
 }
 input#lightInput:checked ~ #wrapper .clearSections {
 }
-input#lightInput:checked ~ #wrapper #mainSection #blogComments {
-  background-color: rgba(0, 0, 0, .1);
-}
 input#lightInput:checked ~ #wrapper #mainSection .blogFooter .previousBox span {
   color: black;
 }
@@ -659,7 +656,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   font-weight: 800;
 }
 #mainSection .blogArticles .post {
-  margin-top: 80px;
+  margin-top: 10px;
 }
 #mainSection .blogArticles .post p {
   text-align: left;
@@ -700,9 +697,10 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
 #mainSection .blogFooter .shareBox {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 200px;
+  margin-bottom: 20px;
 }
 #mainSection .blogFooter .previousBox {
   display: flex;
@@ -710,6 +708,8 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
+  text-align: right;
 }
 #mainSection .blogFooter a:hover {
   color: rgba(255, 255, 255, .5);
