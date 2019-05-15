@@ -403,8 +403,6 @@ input#lightInput:checked ~ #wrapper .navBtn div {
 input#lightInput:checked ~ #wrapper .circleIcon .circle {
   border: 2px solid black;
 }
-input#lightInput:checked ~ #wrapper .clearSections {
-}
 input#lightInput:checked ~ #wrapper #mainSection .blogFooter .previousBox span {
   color: black;
 }
@@ -488,6 +486,50 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   width: 200px;
   height: 200px;
   margin: 0 auto;
+}
+#mainSectionBox .mainSectionDetails {
+  position: relative;
+  width: 100%;
+  padding-top: 40px;
+}
+.mainSectionDetails summary {
+  position: relative;
+  height: 100%;
+  outline: 0;
+  outline-style:none;
+  outline-width:0;
+  cursor: pointer;
+}
+.mainSectionDetails summary::-webkit-details-marker {
+  display: none;
+}
+.mainSectionDetails summary {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: calc(50% - 3px);
+  top: 6px;
+}
+.mainSectionDetails summary:before, summary:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: rgb(221, 182, 78);
+  transition: transform .2s ease-in-out;
+}
+.mainSectionDetails summary:before {
+  transform: rotate(45deg);
+}
+.mainSectionDetails summary:after {
+  transform: rotate(-45deg);
+}
+.mainSectionDetails[open] summary:before {
+  transform: rotate(135deg);
+}
+.mainSectionDetails[open] summary:after {
+  transform: rotate(45deg);
 }
 #mlIntro #mlImg {
   width: 100%;
@@ -868,11 +910,9 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   #navCheck:checked ~ .navBtn:before {
     transform: translateY(9px) rotate(135deg);
   }
-
   #navCheck:checked ~ .navBtn:after {
     transform: translateY(-9px) rotate(-135deg);
   }
-
   #navCheck:checked ~ .navBtn div {
     transform: scale(0);
   }
