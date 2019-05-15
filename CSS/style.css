@@ -493,24 +493,21 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   padding-top: 40px;
 }
 .mainSectionDetails summary {
-  position: relative;
-  height: 100%;
+}
+.mainSectionDetails summary::-webkit-details-marker {
+  color: rgb(221, 182, 78);
+}
+.mainSectionDetails summary {
+  position: absolute;
+  right: calc(50% - 11px);
+  top: 6px;
   outline: 0;
   outline-style:none;
   outline-width:0;
   cursor: pointer;
+  transition: all .2s ease-in-out;
 }
-.mainSectionDetails summary::-webkit-details-marker {
-  display: none;
-}
-.mainSectionDetails summary {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: calc(50% - 3px);
-  top: 6px;
-}
-.mainSectionDetails summary:before, summary:after {
+/* .mainSectionDetails summary:before, summary:after {
   position: absolute;
   left: 15px;
   content: ' ';
@@ -530,7 +527,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
 }
 .mainSectionDetails[open] summary:after {
   transform: rotate(45deg);
-}
+} */
 #mlIntro #mlImg {
   width: 100%;
   height: 100%;
