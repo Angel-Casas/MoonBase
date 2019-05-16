@@ -489,18 +489,46 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
 }
 #mainSectionBox .mainSectionDetails {
   position: relative;
-  width: 100%;
+  margin: 0 auto;
   padding-top: 40px;
 }
 .mainSectionDetails summary {
+  position: relative;
   height: 50px;
-  width: 50px;
+  width: 100%;
   color: rgb(221, 182, 78);
   outline: 0;
   outline-style:none;
   outline-width:0;
   cursor: pointer;
-  float: right;
+}
+.mainSectionDetails summary .introTooltip {
+  position: absolute;
+  right: calc(50% - 130px);
+  top: -17px;
+  width: 100px;
+  margin: 0 auto;
+  padding: 5px;
+  opacity: 0;
+  background: rgba(0, 0, 0, .4);
+  transition: all .2s ease-in-out;
+  border-radius: 5px;
+}
+.mainSectionDetails summary .introTooltip:before {
+  content: "";
+  position: absolute;
+  bottom: calc(50% - 20px);
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgba(0, 0, 0, .4);
+}
+.mainSectionDetails summary:hover .introTooltip,
+.mainSectionDetails summary:focus .introTooltip {
+  opacity: 1;
+
 }
 /* .mainSectionDetails > summary::-webkit-details-marker {
   color: rgb(221, 182, 78);
