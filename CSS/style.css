@@ -494,7 +494,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
 }
 .mainSectionDetails summary {
   position: relative;
-  height: 40px;
+  height: 50px;
   width: 100%;
   outline: 0;
   outline-style:none;
@@ -502,12 +502,22 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   cursor: pointer;
   transition: all .2s ease-in-out;
 }
-.mainSectionDetails summary::-webkit-details-marker {
-  display: none;
+.mainSectionDetails > summary::-webkit-details-marker {
+  background: url("../images/cross.png") center no-repeat;
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  transition: all .2s ease-in-out;
 }
-.mainSectionDetails summary:before, summary:after {
+.mainSectionDetails[open] > summary::-webkit-details-marker {
+  transform: rotate(45deg);
+}
+/* .mainSectionDetails summary:before, summary:after {
   position: absolute;
   left: calc(50% - 2px);
+  top: 0;
   content: ' ';
   height: 20px;
   width: 2px;
@@ -525,7 +535,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
 }
 .mainSectionDetails[open] summary:after {
   transform: rotate(45deg);
-}
+} */
 #mlIntro #mlImg {
   width: 100%;
   height: 100%;
