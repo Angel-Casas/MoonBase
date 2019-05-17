@@ -409,6 +409,10 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter .previousBox span {
 input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   color: rgba(0, 0, 0, .5);
 }
+input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
+  color: white;
+  background: rgb(20, 24, 54);
+}
 
 
 /* MAIN SECTION */
@@ -491,10 +495,11 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   position: relative;
   margin: 0 auto;
   padding-top: 40px;
+  background: rgb(30, 30, 30);
 }
 .mainSectionDetails summary {
   position: relative;
-  height: 50px;
+  height: 100%;
   width: 100%;
   color: rgb(221, 182, 78);
   outline: 0;
@@ -503,32 +508,30 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   cursor: pointer;
 }
 .mainSectionDetails summary .introTooltip {
-  position: absolute;
-  right: calc(50% - 130px);
-  top: -17px;
-  width: 100px;
+  position: relative;
+  width: auto;
   margin: 0 auto;
-  padding: 5px;
-  opacity: 0;
-  background: rgba(0, 0, 0, .4);
+  padding: 2px 0;
+  font-style: italic;
+  font-weight: bold;
   transition: all .2s ease-in-out;
   border-radius: 5px;
 }
 .mainSectionDetails summary .introTooltip:before {
   content: "";
   position: absolute;
-  bottom: calc(50% - 20px);
-  left: -20px;
+  bottom: -15px;
+  left: calc(50% - 20px);
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid rgba(0, 0, 0, .4);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgb(30, 30, 30);
 }
 .mainSectionDetails summary:hover .introTooltip,
 .mainSectionDetails summary:focus .introTooltip {
   opacity: 1;
-
+  padding: 8px 0;
 }
 /* .mainSectionDetails > summary::-webkit-details-marker {
   color: rgb(221, 182, 78);
@@ -578,17 +581,15 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   background-size: 200px auto;
   background-repeat: no-repeat;
 }
-#mainSection #mlAside {
-  display: none;
-}
 #mainSection aside {
+  display: none;
   width: 100%;
   margin: 0 auto;
   padding: 2.5rem 1.4rem;
   font-size: 2rem;
 }
 #mainSection aside blockquote {
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .2);
   padding: 2.2rem 1.4rem;
   margin: 2.2rem 0;
   font-size: 1.6rem;
@@ -613,7 +614,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
   justify-content: space-around;
   list-style-type: none;
   padding: 0;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .2);
 }
 #mainSection aside .iconsUl li {
   min-width: 80px;
