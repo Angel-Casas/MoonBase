@@ -495,12 +495,15 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   position: relative;
   margin: 0 auto;
   padding-top: 40px;
+  padding-left: 15px;
   background: rgb(30, 30, 30);
+  border: 1px solid rgb(221, 182, 78);
 }
 .mainSectionDetails summary {
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 200px;
+  margin: 0 auto;
   color: rgb(221, 182, 78);
   outline: 0;
   outline-style:none;
@@ -510,6 +513,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 .mainSectionDetails summary .introTooltip {
   position: relative;
   width: auto;
+  left: 0;
   margin: 0 auto;
   padding: 2px 0;
   font-style: italic;
@@ -521,12 +525,12 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   content: "";
   position: absolute;
   bottom: -15px;
-  left: calc(50% - 20px);
+  left: calc(50% - 25px);
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid rgb(30, 30, 30);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 15px solid rgb(221, 182, 78);
 }
 .mainSectionDetails summary:hover .introTooltip,
 .mainSectionDetails summary:focus .introTooltip {
@@ -548,8 +552,8 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   background: url("../images/cross.png") center no-repeat;
   transition: transform .2s ease-in-out;
 } */
-.mainSectionDetails[open] > summary:before {
-  transform: rotate(45deg);
+.mainSectionDetails[open] > summary .introTooltip:before {
+  display: none;
 }
 /* .mainSectionDetails summary:before, summary:after {
   position: absolute;
