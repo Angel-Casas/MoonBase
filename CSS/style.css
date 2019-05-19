@@ -121,7 +121,6 @@ body {
 h4, h5, h6 {
   color: rgb(221, 182, 78);
   text-transform: uppercase;
-  mix-blend-mode: difference;
 }
 h4 {
   font-size: 3.4rem;
@@ -150,7 +149,7 @@ blockquote span {
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
-  background-color: rgb(20, 24, 54);
+  background-color: rgb(61, 63, 78);
   transition: all .3s ease-in-out;
 }
 
@@ -411,7 +410,7 @@ input#lightInput:checked ~ #wrapper #mainSection .blogFooter a:hover {
 }
 input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   color: white;
-  background: rgb(20, 24, 54);
+  background: rgb(61, 63, 78);
 }
 
 
@@ -430,8 +429,6 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 #introMessage h2 {
   text-transform: uppercase;
   font-size: 2.4rem;
-  color: white;
-  mix-blend-mode: difference;
   white-space: nowrap;
   z-index: 10;
 }
@@ -512,8 +509,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 }
 .mainSectionDetails summary .introTooltip {
   position: relative;
-  width: auto;
-  left: 0;
+  left: -5px;
   margin: 0 auto;
   padding: 2px 0;
   font-style: italic;
@@ -535,7 +531,18 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 .mainSectionDetails summary:hover .introTooltip,
 .mainSectionDetails summary:focus .introTooltip {
   opacity: 1;
-  padding: 8px 0;
+  animation: pop .5s ease-in-out;
+}
+@keyframes pop {
+  0% {
+    padding: 2px 0;
+  }
+  50% {
+    padding: 8px 0;
+  }
+  100% {
+    padding: 2px 0;
+  }
 }
 /* .mainSectionDetails > summary::-webkit-details-marker {
   color: rgb(221, 182, 78);
@@ -638,9 +645,6 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   margin: 2.8rem 0;
 }
 #mainSection .blogSection h5 {
-  color: rgb(221, 182, 78);
-  text-transform: uppercase;
-  mix-blend-mode: difference;
   margin: 2.2rem 0;
 }
 #mainSection .blogArticles {
@@ -666,12 +670,13 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   position: relative;
   width: 300px;
   height: 200px;
-  border: 3px solid rgb(221, 182, 78);
-  border-radius: 10px;
+  border: 1px solid rgb(221, 182, 78);
   margin: 2rem;
+  z-index: 10;
+  background: url("../images/preview.png") center no-repeat;
 }
 #mainSection .previewBox .previewPost .tags {
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .6);
   padding: .4rem;
   color: black;
 }
@@ -688,6 +693,18 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+#mainSection .previewBox .previewPost img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  z-index: -1;
+}
+#mainSection .previewBox .previewPost h6 {
+  background-color: rgba(255, 255, 255, .8);
 }
 #mainSection .blogArticles input[type="checkbox"] {
   position: absolute;
@@ -905,8 +922,6 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   font-size: 1.6rem;
   font-style: normal;
   white-space: nowrap;
-  mix-blend-mode: normal;
-  color: rgb(221, 182, 78);
   padding: 1rem 0;
 }
 #footerBox .footerDiv a {
