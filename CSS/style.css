@@ -320,12 +320,18 @@ blockquote span {
 #mainSection #bitcoinTab:checked ~ #introduction h2::before {
   content: "Bitcoin";
 }
+#mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinSection {
+  display: block;
+}
 #mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinIntro,
 #mainSection #bitcoinTab:checked ~ #mainSectionBox #bitcoinAside {
   display: block;
 }
 #mainSection #appsTab:checked ~ #introduction h2::before {
   content: "Apps";
+}
+#mainSection #appsTab:checked ~ #mainSectionBox #appsSection {
+  display: block;
 }
 #mainSection #appsTab:checked ~ #mainSectionBox #appsIntro,
 #mainSection #appsTab:checked ~ #mainSectionBox #appsAside {
@@ -334,12 +340,18 @@ blockquote span {
 #mainSection #booksTab:checked ~ #introduction h2::before {
   content: "Books";
 }
+#mainSection #bitcoinTab:checked ~ #mainSectionBox #booksSection {
+  display: block;
+}
 #mainSection #booksTab:checked ~ #mainSectionBox #booksIntro,
 #mainSection #booksTab:checked ~ #mainSectionBox #booksAside {
   display: block;
 }
 #mainSection #aboutTab:checked ~ #introduction h2::before {
   content: "About";
+}
+#mainSection #bitcoinTab:checked ~ #mainSectionBox #aboutSection {
+  display: block;
 }
 #mainSection #aboutTab:checked ~ #mainSectionBox #aboutIntro,
 #mainSection #aboutTab:checked ~ #mainSectionBox #aboutAside {
@@ -632,8 +644,19 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   height: 200px;
   border: 1px solid rgb(221, 182, 78);
   margin: 2rem;
+  background-size: 300px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 10;
-  background: url("../images/preview.png") center no-repeat;
+}
+#mainSection #mlSection .previewPost {
+  background-image: url("../images/previewML.png");
+}
+#mainSection #bitcoinSection .previewPost {
+  background-image: url("../images/previewBitcoin.png");
+}
+#mainSection #appsSection .previewPost {
+  background-image: url("../images/previewApps.png");
 }
 #mainSection .previewBox .previewPost p {
   color: black;
