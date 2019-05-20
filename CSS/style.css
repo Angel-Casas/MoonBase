@@ -331,11 +331,18 @@ blockquote span {
 #mainSection #appsTab:checked ~ #mainSectionBox #appsAside {
   display: block;
 }
-#mainSection #blogTab:checked ~ #introduction h2::before {
+#mainSection #booksTab:checked ~ #introduction h2::before {
   content: "Books";
 }
-#mainSection #blogTab:checked ~ #mainSectionBox #blogIntro,
-#mainSection #blogTab:checked ~ #mainSectionBox #blogAside {
+#mainSection #booksTab:checked ~ #mainSectionBox #booksIntro,
+#mainSection #booksTab:checked ~ #mainSectionBox #booksAside {
+  display: block;
+}
+#mainSection #aboutTab:checked ~ #introduction h2::before {
+  content: "About";
+}
+#mainSection #aboutTab:checked ~ #mainSectionBox #aboutIntro,
+#mainSection #aboutTab:checked ~ #mainSectionBox #aboutAside {
   display: block;
 }
 
@@ -492,8 +499,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   position: relative;
   margin: 0 auto;
   padding-top: 40px;
-  padding-left: 15px;
-  background: rgb(30, 30, 30);
+  background: rgb(50, 50, 50);
   border: 1px solid rgb(221, 182, 78);
 }
 .mainSectionDetails summary {
@@ -509,13 +515,12 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 }
 .mainSectionDetails summary .introTooltip {
   position: relative;
-  left: -5px;
+  left: 0;
   margin: 0 auto;
   padding: 2px 0;
   font-style: italic;
   font-weight: bold;
   transition: all .2s ease-in-out;
-  border-radius: 5px;
 }
 .mainSectionDetails summary .introTooltip:before {
   content: "";
@@ -531,59 +536,14 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 .mainSectionDetails summary:hover .introTooltip,
 .mainSectionDetails summary:focus .introTooltip {
   opacity: 1;
-  animation: pop .5s ease-in-out;
+  padding: 8px 0;
 }
-@keyframes pop {
-  0% {
-    padding: 2px 0;
-  }
-  50% {
-    padding: 8px 0;
-  }
-  100% {
-    padding: 2px 0;
-  }
-}
-/* .mainSectionDetails > summary::-webkit-details-marker {
-  color: rgb(221, 182, 78);
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  padding: 0;
-} */
-/* .mainSectionDetails > summary:before {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  content: "";
-  background: url("../images/cross.png") center no-repeat;
-  transition: transform .2s ease-in-out;
-} */
 .mainSectionDetails[open] > summary .introTooltip:before {
   display: none;
 }
-/* .mainSectionDetails summary:before, summary:after {
-  position: absolute;
-  left: calc(50% - 2px);
-  top: 0;
-  content: ' ';
-  height: 20px;
-  width: 2px;
-  background-color: rgb(221, 182, 78);
-  transition: transform .2s ease-in-out;
+.mainSectionDetails > summary::-webkit-details-marker {
+  display: none;
 }
-.mainSectionDetails summary:before {
-  transform: rotate(45deg);
-}
-.mainSectionDetails summary:after {
-  transform: rotate(-45deg);
-}
-.mainSectionDetails[open] summary:before {
-  transform: rotate(135deg);
-}
-.mainSectionDetails[open] summary:after {
-  transform: rotate(45deg);
-} */
 #mlIntro #mlImg {
   width: 100%;
   height: 100%;
@@ -675,10 +635,12 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   z-index: 10;
   background: url("../images/preview.png") center no-repeat;
 }
+#mainSection .previewBox .previewPost p {
+  color: black;
+}
 #mainSection .previewBox .previewPost .tags {
   background-color: rgba(255, 255, 255, .6);
   padding: .4rem;
-  color: black;
 }
 #mainSection .previewBox .previewPost .tags::before {
   content: "Tags:";
@@ -689,10 +651,11 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   text-decoration: underline;
 }
 #mainSection .previewBox .previewPost .postDate {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   position: absolute;
   bottom: 0;
   right: 0;
+  padding: 5px;
 }
 #mainSection .previewBox .previewPost img {
   position: absolute;
