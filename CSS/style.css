@@ -552,7 +552,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   background-size: 200px auto;
   background-repeat: no-repeat;
 }
-#mainSection aside {
+#mainSection aside:not(.blogAside) {
   display: none;
   width: 100%;
   margin: 0 auto;
@@ -875,7 +875,8 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 #mainFooter .footerQuote {
   display: block;
   width: 100%;
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
 }
 #footerBox .footerDiv {
   margin: .8rem;
@@ -895,7 +896,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 
 /* MEDIA SECTION */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   #mainNav > h2 {
     display: inline-block;
     float: left;
