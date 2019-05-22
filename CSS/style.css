@@ -340,7 +340,7 @@ blockquote span {
 #mainSection #booksTab:checked ~ #introduction h2::before {
   content: "Books";
 }
-#mainSection #bitcoinTab:checked ~ #mainSectionBox #booksSection {
+#mainSection #booksTab:checked ~ #mainSectionBox #booksSection {
   display: block;
 }
 #mainSection #booksTab:checked ~ #mainSectionBox #booksIntro,
@@ -350,7 +350,7 @@ blockquote span {
 #mainSection #aboutTab:checked ~ #introduction h2::before {
   content: "About";
 }
-#mainSection #bitcoinTab:checked ~ #mainSectionBox #aboutSection {
+#mainSection #aboutTab:checked ~ #mainSectionBox #aboutSection {
   display: block;
 }
 #mainSection #aboutTab:checked ~ #mainSectionBox #aboutIntro,
@@ -841,6 +841,35 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 }
 #wrapper #appsAside {
   display: none;
+}
+/* BOOKS SECTION */
+#booksIntro #booksImg {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/books.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200px auto;
+}
+#wrapper #booksAside {
+  display: none;
+}
+#booksSection .booksDiv {
+
+}
+#booksSection .booksDiv > * {
+  height: 200px;
+}
+#booksSection .booksDiv .personalBooks {
+}
+#booksSection .booksDiv .booksBox {
+
+}
+#booksSection .booksDiv .booksItem {
+
+}
+#booksSection .booksDiv .suggestedBooks {
+
 }
 
 /* FOOTER SECTION */
