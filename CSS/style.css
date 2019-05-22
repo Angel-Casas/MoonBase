@@ -813,6 +813,9 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   color: white;
   padding-bottom: 4px;
 }
+#mainSection .blogComments {
+  margin-top: 10px;
+}
 
 /* BITCOIN SECTION */
 #bitcoinIntro #bitcoinImg {
