@@ -510,7 +510,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 #mainSectionBox .mainSectionDetails {
   position: relative;
   margin: 0 auto;
-  padding-top: 40px;
+  padding: 3px 0;
   background: rgb(50, 50, 50);
   border: 1px solid rgb(221, 182, 78);
 }
@@ -537,7 +537,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 .mainSectionDetails summary .introTooltip:before {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: -18px;
   left: calc(50% - 25px);
   width: 0;
   height: 0;
