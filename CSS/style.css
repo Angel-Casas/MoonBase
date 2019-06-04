@@ -438,6 +438,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 
 /* MAIN SECTION */
 #wrapper #mainSection {
+  position: relative;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
@@ -540,18 +541,17 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 .mainSectionDetails summary .introTooltip:before {
   content: "";
   position: absolute;
-  bottom: -18px;
-  left: calc(50% - 25px);
+  bottom: -9px;
+  left: calc(50% - 15px);
   width: 0;
   height: 0;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 15px solid rgb(221, 182, 78);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 5px solid rgb(221, 182, 78);
 }
 .mainSectionDetails summary:hover .introTooltip,
 .mainSectionDetails summary:focus .introTooltip {
-  opacity: 1;
-  padding: 8px 0;
+  color: rgb(222, 205, 118);
 }
 .mainSectionDetails[open] > summary .introTooltip:before {
   display: none;
@@ -652,14 +652,8 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   background-position: center;
   z-index: 10;
 }
-#mainSection #mlSection .previewPost {
-  background-image: url("../images/previewML.png");
-}
-#mainSection #bitcoinSection .previewPost {
-  background-image: url("../images/previewBitcoin.png");
-}
-#mainSection #appsSection .previewPost {
-  background-image: url("../images/previewApps.png");
+#mainSection .previewPost {
+  background-color: rgba(255, 255, 255, .5);
 }
 #mainSection .previewBox .previewPost p {
   color: black;
@@ -889,6 +883,37 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   width: 50px;
   height: 50px;
 }
+#mainFooter .footerSubscriptionFormGroup {
+  padding: 3rem 0;
+}
+#mainFooter .footerSubscriptionFormGroup h4 {
+  font-size: 2.2rem;
+}
+#mainFooter #subscribeForm #newSubscription {
+}
+#subscribeForm .radioButtonGroup {
+  display: inline-block;
+  padding: 12px 20px;
+}
+#mainFooter #subscribeForm input[type=radio] {
+  display: inline-block;
+  outline: 0;
+}
+#subscribeForm #emailToSubscribe::placeholder {
+  color: inherit;
+  opacity: .6;
+}
+#subscribeLoading,
+#confirmCaptcha,
+#subscribeSuccessful {
+  display: none;
+}
+#subscribeForm input {
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid rgb(221, 182, 78);
+  padding: 10px;
+}
 #mainFooter #footerBox {
   display: flex;
   flex-flow: row nowrap;
@@ -1020,7 +1045,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
     height: auto;
     position: fixed;
     left: 0;
-    top: 20%;
+    top: 250px;
   }
   #mainSection #blogNav {
     width: 100%;
