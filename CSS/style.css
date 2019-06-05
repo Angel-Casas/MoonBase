@@ -149,7 +149,7 @@ blockquote span {
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
-  background-color: rgb(61, 63, 78);
+  background-color: rgb(84, 86, 99);
   transition: all .3s ease-in-out;
 }
 
@@ -379,7 +379,6 @@ blockquote span {
   font-size: 1.2rem;
   margin-top: 5px;
   text-transform: uppercase;
-  mix-blend-mode: exclusion;
   z-index: 10;
 }
 #lightLabel:hover {
@@ -398,15 +397,16 @@ blockquote span {
   bottom: -5px;
   left: 15px;
   transition: all .3s ease-in-out;
-  mix-blend-mode: exclusion;
 }
 #lightLabel:hover span::after {
   left: 0px;
 }
 input#lightInput:checked + #lightLabel {
+  color: black;
 }
 input#lightInput:checked + #lightLabel span::after {
   left: 40px;
+  background-color: black;
 }
 input#lightInput:checked + #lightLabel:hover span::after {
   left: 60px;
@@ -515,8 +515,8 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   position: relative;
   margin: 0 auto;
   padding: 3px 0;
-  background: rgb(50, 50, 50);
-  border: 1px solid rgb(221, 182, 78);
+  background: rgba(0, 0, 0, .4);
+  border-bottom: 1px solid rgb(221, 182, 78);
 }
 .mainSectionDetails summary {
   position: relative;
@@ -536,7 +536,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   padding: 2px 0;
   font-style: italic;
   font-weight: bold;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 .mainSectionDetails summary .introTooltip:before {
   content: "";
@@ -623,8 +623,6 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   margin: 2.2rem 0;
 }
 #mainSection .blogArticles {
-  outline: 1px solid rgb(221, 182, 78);
-  outline-offset: 5px;
   margin: 5px;
 }
 #mainSection .blogArticles .previewSection {
@@ -749,14 +747,10 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   margin: 0 10px;
 }
 #mainSection .blogArticles .post #dropCap {
-  font-size: 55px;
-  line-height: 50px;
+  font-size: 5.4rem;
+  line-height: 2.8rem;
   float: left;
-  outline: 1px solid rgb(220, 170, 50);
-  outline-offset: -5px;
-  border: 1px solid rgb(220, 170, 50);
   padding: 5px;
-  margin-right: 7px;
   color: rgb(220, 170, 50);
 }
 #mainSection .blogFooter {
@@ -883,41 +877,11 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   width: 50px;
   height: 50px;
 }
-#mainFooter .footerSubscriptionFormGroup {
-  padding: 3rem 0;
-}
-#mainFooter .footerSubscriptionFormGroup h4 {
-  font-size: 2.2rem;
-}
-#mainFooter #subscribeForm #newSubscription {
-}
-#subscribeForm .radioButtonGroup {
-  display: inline-block;
-  padding: 12px 20px;
-}
-#mainFooter #subscribeForm input[type=radio] {
-  display: inline-block;
-  outline: 0;
-}
-#subscribeForm #emailToSubscribe::placeholder {
-  color: inherit;
-  opacity: .6;
-}
-#subscribeLoading,
-#confirmCaptcha,
-#subscribeSuccessful {
-  display: none;
-}
-#subscribeForm input {
-  background-color: inherit;
-  color: inherit;
-  border: 1px solid rgb(221, 182, 78);
-  padding: 10px;
-}
 #mainFooter #footerBox {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 #mainFooter #footerBox p {
@@ -960,6 +924,9 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   width: 100%;
   margin-bottom: 1.2rem;
   font-size: 1.4rem;
+}
+#mainFooter .footerQuote span {
+  font-size: 3.2rem;
 }
 #footerBox .footerDiv {
   margin: .8rem;
