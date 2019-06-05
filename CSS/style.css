@@ -975,10 +975,12 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-self: center;
-    transition: height .3s ease-in-out;
+    opacity: 0;
+    transition: all .2s ease-in-out;
   }
   #navCheck:checked ~ label {
     height: 50px;
+    opacity: 1;
   }
   #navCheck:checked ~ .navBtn:before {
     transform: translateY(9px) rotate(135deg);
