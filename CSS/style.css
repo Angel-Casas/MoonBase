@@ -519,6 +519,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   border-bottom: 1px solid rgb(221, 182, 78);
 }
 .mainSectionDetails summary {
+  display: block;
   position: relative;
   height: 100%;
   width: 200px;
