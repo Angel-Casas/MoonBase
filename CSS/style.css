@@ -270,7 +270,7 @@ blockquote span {
   display: inline-block;
   width: auto;
   min-width: 100px;
-  height: 50px;
+  height: 3.2rem;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -846,22 +846,81 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 #wrapper #booksAside {
   display: none;
 }
+#wrapper #booksSection {
+  height: 100%;
+  padding-bottom: 2.4rem;
+}
 #booksSection .booksDiv {
-
 }
 #booksSection .booksDiv > * {
-  height: 200px;
 }
 #booksSection .booksDiv .personalBooks {
 }
 #booksSection .booksDiv .booksBox {
-
+  position: relative;
+  border: 1px solid rgb(221, 182, 78);
+  background-color: rgba(0, 0, 0, .2);
+  min-height: 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 #booksSection .booksDiv .booksItem {
+}
+#booksSection .booksDiv .bookInfoDropdown {
+  position: absolute;
+  width: 300px;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  border: 1px solid rgb(221, 182, 78);
+  background-color: rgb(30, 30, 30);
+  padding: 1.6rem;
+  transition: opacity .2s ease-in-out;
+  z-index: 10;
+}
+#booksSection .booksDiv .booksItem:hover .bookInfoDropdown {
+  opacity: 1;
 
+}
+#booksSection .booksDiv .booksItem a {
+  display: inline-block;
+  color: rgb(105, 175, 221);
+  cursor: pointer;
+  text-decoration: underline;
 }
 #booksSection .booksDiv .suggestedBooks {
 
+}
+#booksSection .booksForm {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 1.2rem 0;
+}
+#booksSection .booksForm > *:not(header) {
+  border: 1px solid rgb(221, 182, 78);
+  margin: .5rem 0;
+}
+#booksSection .booksForm input {
+}
+#booksSection .booksForm textarea {
+}
+#booksSection .booksForm button {
+  padding: 1.2rem;
+  background-color: rgb(61, 63, 78);
+  color: rgb(221, 182, 78);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#booksSection .booksForm button:hover {
+  color: rgb(61, 63, 78);
+  background-color: rgb(221, 182,78);
 }
 
 /* FOOTER SECTION */
@@ -980,7 +1039,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
     transition: all .2s ease-in-out;
   }
   #navCheck:checked ~ label {
-    height: 50px;
+    height: 4.8rem;
     opacity: 1;
   }
   #navCheck:checked ~ .navBtn:before {
