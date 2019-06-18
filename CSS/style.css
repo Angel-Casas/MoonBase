@@ -862,28 +862,34 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   background-color: rgba(0, 0, 0, .2);
   min-height: 200px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  padding: 1rem;
 }
 #booksSection .booksDiv .booksItem {
 }
+#booksSection .booksDiv .booksItem img {
+  width: 160px;
+  height: 220px;
+}
 #booksSection .booksDiv .bookInfoDropdown {
+  display: none;
   position: absolute;
-  width: 300px;
+  width: 50vw;
+  min-width: 350px;
   top: 25%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  opacity: 0;
   border: 1px solid rgb(221, 182, 78);
   background-color: rgb(30, 30, 30);
   padding: 1.6rem;
-  transition: opacity .2s ease-in-out;
   z-index: 10;
 }
-#booksSection .booksDiv .booksItem:hover .bookInfoDropdown {
-  opacity: 1;
+#booksSection .booksDiv .booksItem:hover .bookInfoDropdown,
+#booksSection .booksDiv .booksItem .bookImageAnchor:focus + .bookInfoDropdown {
+  display: block;
 
 }
 #booksSection .booksDiv .booksItem a {
