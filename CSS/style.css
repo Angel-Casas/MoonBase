@@ -717,11 +717,11 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 #mainSection .blogArticles .post {
   margin-top: 10px;
 }
-#mainSection .blogArticles .post p {
+#mainSection .blogArticles p {
   text-align: left;
   margin: 0 10px;
 }
-#mainSection .blogArticles .post #dropCap {
+#mainSection .blogArticles .dropCap {
   font-size: 5.4rem;
   line-height: 2.8rem;
   float: left;
@@ -782,7 +782,11 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 #mainSection .blogComments {
   margin-top: 10px;
 }
-
+#mainSection .important {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-style: italic;
+}
 /* BITCOIN SECTION */
 #bitcoinIntro #bitcoinImg {
   width: 100%;
@@ -807,6 +811,30 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 }
 #wrapper #appsAside {
   display: none;
+}
+#appsSection .appsBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#appsSection .appsBox .appsItem img {
+  display: block;
+  border-radius: 50px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+#appsSection .appsBox .appsItem p {
+  margin: 5px 10px;
+}
+#appsSection .appsBox .appsItem a {
+  color: rgb(105, 175, 221);
+}
+#appsSection .appsBox .appsItem a:hover {
+  text-decoration: underline;
 }
 /* BOOKS SECTION */
 #booksIntro #booksImg {
@@ -858,6 +886,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   top: 25%;
   left: 0;
   right: 0;
+  color: white;
   margin: 0 auto;
   border: 1px solid rgb(221, 182, 78);
   background-color: rgb(30, 30, 30);
@@ -905,6 +934,35 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   color: rgb(61, 63, 78);
   background-color: rgb(221, 182,78);
 }
+
+/* ABOUT SECTION */
+#aboutSection .presentation {
+  margin: 0 10px;
+  text-align: left;
+}
+#aboutSection .presentation p span {
+  display: block;
+  font-size: 2.2rem;
+  color: rgb(221, 182, 78);
+}
+#aboutSection .presentation ul {
+  padding-left: 20px;
+}
+#aboutSection .presentation ul li {
+  margin: 10px 0;
+}
+#aboutSection .presentation ul li::before {
+  content: "\2192";
+  margin-right: 5px;
+  color: rgb(221, 182, 78);
+}
+#aboutSection .presentation ul li a {
+  color: rgb(105, 175, 221);
+}
+#aboutSection .presentation ul li a:hover {
+  text-decoration: underline;
+}
+
 
 /* FOOTER SECTION */
 
