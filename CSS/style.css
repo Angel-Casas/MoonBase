@@ -506,6 +506,9 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   height: 200px;
   margin: 0 auto;
 }
+#mainSectionBox {
+  position: relative;
+}
 #mainSectionBox .mainSectionDetails {
   position: relative;
   margin: 0 auto;
@@ -1111,14 +1114,16 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 }
 @media (min-width: 1300px) {
   #mainSection .blogAside {
+    position: absolute;
+    left: -310px;
+    top: 0;
     width: 300px;
-    height: auto;
-    position: fixed;
-    left: 0;
-    top: 250px;
+    height: 100%;
+    z-index: 1;
+    overflow-x: hidden;
   }
   #mainSection #blogNav {
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    width: 300px;
   }
 }
