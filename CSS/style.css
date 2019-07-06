@@ -731,6 +731,19 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   padding: 5px;
   color: rgb(220, 170, 50);
 }
+#mainSection .post ul {
+  margin: 2px 5px;
+}
+#mainSection .post ul li {
+}
+#mainSection .post ul li::before {
+  content: "";
+  width: 10px;
+  height: 5px;
+  border-radius: 50%;
+  border: 2px solid rgb(221, 182, 78);
+  background-color: rgb(221, 182, 78);
+}
 #mainSection .blogFooter {
   display: flex;
   flex-flow: column nowrap;
