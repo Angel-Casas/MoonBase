@@ -721,7 +721,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 }
 #mainSection .blogArticles p {
   text-align: left;
-  margin: 0 10px;
+  margin: 5px 10px;
 }
 #mainSection .blogArticles .dropCap {
   font-size: 5.4rem;
