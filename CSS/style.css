@@ -699,11 +699,6 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   font-size: 2.4rem;
   color: rgb(221, 182, 78);
 }
-#mainSection .post .entryTags {
-}
-#mainSection .post header a:hover {
-  opacity: 0.6;
-}
 #mainSection .post .entryDate,
 #mainSection .post .entryComments {
   font-style: italic;
@@ -716,6 +711,10 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 }
 #mainSection .post a {
   font-weight: 800;
+  color: rgb(105, 175, 221);
+}
+#mainSection .post a:hover {
+  text-decoration: underline;
 }
 #mainSection .blogArticles .post {
   margin-top: 10px;
@@ -732,16 +731,22 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   color: rgb(220, 170, 50);
 }
 #mainSection .post ul {
-  margin: 2px 5px;
+  width: 80%;
+  margin: 10px auto;
+  text-align: left;
 }
 #mainSection .post ul li {
+  margin-top: 10px;
 }
 #mainSection .post ul li::before {
   content: "";
-  width: 10px;
-  height: 5px;
+  width:10px;
+  height:10px;
+  display: block;
   border-radius: 50%;
-  border: 2px solid rgb(221, 182, 78);
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
   background-color: rgb(221, 182, 78);
 }
 #mainSection .blogFooter {
@@ -842,15 +847,6 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   min-width: 300px;
   max-width: 450px;
   margin: 0 auto;
-}
-#appsSection .appsBox .appsItem p {
-  margin: 5px 10px;
-}
-#appsSection .appsBox .appsItem a {
-  color: rgb(105, 175, 221);
-}
-#appsSection .appsBox .appsItem a:hover {
-  text-decoration: underline;
 }
 /* BOOKS SECTION */
 #booksIntro #booksImg {
