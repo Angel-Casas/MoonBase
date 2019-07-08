@@ -874,17 +874,21 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
 #booksSection .booksDiv .booksBox {
   border: 1px solid rgb(221, 182, 78);
   background-color: rgba(0, 0, 0, .2);
-  min-height: 200px;
+  height: 200px;
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 #booksSection .booksDiv .booksItem {
   margin: 1.2rem;
+}
+#booksSection .booksDiv .booksItem summary {
+  font-size: 1.6rem;
+  color: rgb(221, 182, 78);
 }
 #booksSection .booksDiv .booksItem img {
   width: 160px;
@@ -895,7 +899,7 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   position: absolute;
   width: 50vw;
   min-width: 350px;
-  top: 25%;
+  top: 0;
   left: 0;
   right: 0;
   color: white;
@@ -905,10 +909,8 @@ input#lightInput:checked ~ #wrapper #mainSectionBox .mainSectionDetails {
   padding: 1.6rem;
   z-index: 10;
 }
-#booksSection .booksDiv .booksItem:hover .bookInfoDropdown,
-#booksSection .booksDiv .booksItem .bookImageAnchor:focus + .bookInfoDropdown {
+#booksSection .booksDiv .booksItem summary:focus + .bookInfoDropdown {
   display: block;
-
 }
 #booksSection .booksDiv .booksItem a {
   display: inline-block;
